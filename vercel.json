@@ -1,0 +1,17 @@
+{
+    "cleanUrls": true,
+    "rewrites": [
+        {
+            "source": "/",
+            "destination": "/frontend/pages/index.html"
+        },
+        {
+            "source": "/login",
+            "destination": "/frontend/pages/login.html"
+        },
+        {
+            "source": "/app",
+            "destination": "/frontend/pages/app.html"
+        }
+    ]
+}
