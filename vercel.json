@@ -3,15 +3,15 @@
     "rewrites": [
         {
             "source": "/",
-            "destination": "/frontend/pages/index.html"
+            "destination": "/frontend/index.html"
         },
         {
             "source": "/login",
-            "destination": "/frontend/pages/login.html"
+            "destination": "/frontend/login.html"
         },
         {
             "source": "/app",
-            "destination": "/frontend/pages/app.html"
+            "destination": "/frontend/app.html"
         }
     ]
 }
