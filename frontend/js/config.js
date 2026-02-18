@@ -11,7 +11,12 @@ const CONFIG = {
     // Function to load keys from backend
     async loadRemoteConfig() {
         try {
-            const response = await fetch('http://localhost:5001/api/config');
+            // Environment Detection: Use localhost if running locally, otherwise use Render URL
+            const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+            const backendBase = isLocal ? 'http://localhost:5001' : 'https://your-backend-name.onrender.com';
+
+            console.log(`Connecting to backend at: ${backendBase}`);
+            const response = await fetch(`${backendBase}/api/config`);
             const data = await response.json();
             this.HF_TOKEN = data.HF_TOKEN;
             this.DEEPGRAM_KEY = data.DEEPGRAM_KEY;

@@ -1,0 +1,17 @@
+{
+    "version": 2,
+    "public": true,
+    "name": "selectra-frontend",
+    "builds": [
+        {
+            "src": "**",
+            "use": "@vercel/static"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/$1"
+        }
+    ]
+}
