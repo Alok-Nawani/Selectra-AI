@@ -182,7 +182,7 @@ function setupInterviewEditor() {
 
 async function startSession() {
     // Load Data
-    const url = `../data/interviews/${selectedCompany}/${selectedType}.json`;
+    const url = `data/interviews/${selectedCompany}/${selectedType}.json`;
     console.log(`Fetching questions from ${url}`);
 
     try {
@@ -450,7 +450,7 @@ async function endInterview() {
 
     let analysis;
     try {
-        const response = await fetch('http://localhost:5001/api/generate-feedback', {
+        const response = await fetch(`${CONFIG.API_URL}/api/generate-feedback`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

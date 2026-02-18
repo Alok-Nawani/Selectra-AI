@@ -278,7 +278,7 @@ async function loadPracticeQuestions(moduleId) {
     main.innerHTML = `<div class="p-8 text-center"><i class="fa-solid fa-circle-notch fa-spin text-3xl text-blue-500"></i><p class="mt-4">Loading Practice Problems...</p></div>`;
 
     try {
-        const data = await fetchData(`../data/learning/quizzes/${moduleId}.json`);
+        const data = await fetchData(`data/learning/quizzes/${moduleId}.json`);
         // Fallback for smaller datasets
         if (!data || data.length === 0) {
             main.innerHTML = `<div class="p-8 text-center text-gray-400">No practice problems found.</div>`;

@@ -26,9 +26,9 @@ Vercel is the best for hosting high-speed frontends.
 1. Create a free account at [Vercel.com](https://vercel.com).
 2. Click **Add New** > **Project** and select this repository.
 3. **Configuration**:
-   - **Root Directory**: `frontend`
+   - **Root Directory**: (Leave blank)
    - **Framework Preset**: `Other`
-   - **Build Settings**: (Leave empty)
+   - **Build Settings**: (Leave blank)
 4. Click **Deploy**.
 
 ## 3. Connecting Frontend to Backend

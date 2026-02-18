@@ -8,15 +8,15 @@ const CONFIG = {
     HF_MODEL: "mistralai/Mistral-7B-Instruct-v0.2",
     DEEPGRAM_URL: "wss://api.deepgram.com/v1/listen?smart_format=true&model=nova-2&language=en-US",
 
+    API_URL: window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+        ? 'http://localhost:5001'
+        : 'https://selectra-ai.onrender.com',
+
     // Function to load keys from backend
     async loadRemoteConfig() {
         try {
-            // Environment Detection: Use localhost if running locally, otherwise use Render URL
-            const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-            const backendBase = isLocal ? 'http://localhost:5001' : 'https://selectra-ai.onrender.com';
-
-            console.log(`Connecting to backend at: ${backendBase}`);
-            const response = await fetch(`${backendBase}/api/config`);
+            console.log(`Connecting to backend at: ${this.API_URL}`);
+            const response = await fetch(`${this.API_URL}/api/config`);
             const data = await response.json();
             this.HF_TOKEN = data.HF_TOKEN;
             this.DEEPGRAM_KEY = data.DEEPGRAM_KEY;

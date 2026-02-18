@@ -1,5 +1,6 @@
 import { fetchData, generateText } from '../utils.js';
 import { getProgress, saveProgress } from './auth.js';
+import CONFIG from '../config.js';
 
 let myCodeMirror;
 let problems = [];
@@ -9,7 +10,7 @@ export async function initArena() {
     console.log('Initializing Coding Arena');
 
     // Load Problems
-    const data = await fetchData('../data/cp_questions.json');
+    const data = await fetchData('data/cp_questions.json');
     if (data) {
         problems = Array.isArray(data) ? data : data.problems || [];
         renderProblemList(problems);
@@ -256,7 +257,7 @@ function setupEditorEvents() {
 
             try {
                 // Call Backend for Simulation
-                const response = await fetch('http://localhost:5001/api/run-code', {
+                const response = await fetch(`${CONFIG.API_URL}/api/run-code`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
@@ -322,7 +323,7 @@ function setupEditorEvents() {
                 const language = langSelect ? langSelect.value : "javascript";
 
                 // Call Backend API
-                const response = await fetch('http://localhost:5001/api/submit-code', {
+                const response = await fetch(`${CONFIG.API_URL}/api/submit-code`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({

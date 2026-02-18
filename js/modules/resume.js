@@ -1,4 +1,5 @@
 import { generateText } from '../utils.js';
+import CONFIG from '../config.js';
 
 export function initResume() {
     console.log('Initializing Resume Audit Module');
@@ -99,7 +100,7 @@ function setupAnalysiser() {
         analyzeBtn.disabled = true;
 
         try {
-            const response = await fetch('http://localhost:5001/api/analyze-resume', {
+            const response = await fetch(`${CONFIG.API_URL}/api/analyze-resume`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ resumeText, jdText })

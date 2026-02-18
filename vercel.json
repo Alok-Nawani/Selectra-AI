@@ -1,17 +1,14 @@
 {
     "cleanUrls": true,
+    "trailingSlash": false,
     "rewrites": [
         {
-            "source": "/",
-            "destination": "/frontend/index.html"
-        },
-        {
             "source": "/login",
-            "destination": "/frontend/login.html"
+            "destination": "/login.html"
         },
         {
             "source": "/app",
-            "destination": "/frontend/app.html"
+            "destination": "/app.html"
         }
     ]
 }

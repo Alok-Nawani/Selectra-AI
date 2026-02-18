@@ -63,7 +63,7 @@ selectra-ai/
     ```
 
 5.  **Run the Frontend**:
-    - Open `frontend/index.html` in your browser, or serve it using a lightweight server like separate live-server or via the backend static file serving (if configured).
+    - Open `index.html` in your browser.
 
 ##  Deployment
 
