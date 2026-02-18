@@ -13,7 +13,7 @@ const CONFIG = {
         try {
             // Environment Detection: Use localhost if running locally, otherwise use Render URL
             const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-            const backendBase = isLocal ? 'http://localhost:5001' : 'https://your-backend-name.onrender.com';
+            const backendBase = isLocal ? 'http://localhost:5001' : 'https://selectra-ai.onrender.com';
 
             console.log(`Connecting to backend at: ${backendBase}`);
             const response = await fetch(`${backendBase}/api/config`);
