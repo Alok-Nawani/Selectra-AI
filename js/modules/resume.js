@@ -140,26 +140,32 @@ function renderResults(data) {
 
     // 1. Header & Executive Summary
     const headerHTML = `
-        <div class="resume-dashboard-header">
+        <div class="resume-dashboard-header" style="background: rgba(15, 23, 42, 0.6); padding: 2rem; border-radius: 16px; border: 1px solid rgba(56, 189, 248, 0.2); margin-bottom: 2rem; display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
             <!-- Score Card -->
-            <div class="score-card-main">
-                <h4 class="label" style="margin-bottom: 1.5rem;">Overall Match</h4>
-                <div class="circular-score-lg" style="--score-color: ${getScoreColor(data.match_score)}">
-                    <svg viewBox="0 0 36 36" class="circular-chart">
-                        <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <path class="circle" stroke-dasharray="${data.match_score}, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" style="stroke: ${getScoreColor(data.match_score)}" />
+            <div class="score-card-main" style="flex: 1; min-width: 200px; text-align: center;">
+                <h3 style="color: white; padding-bottom: 1rem; margin-bottom: 1.5rem; font-size: 1.2rem;"><i class="fa-solid fa-chart-pie text-sky-400"></i> Baseline Match</h3>
+                
+                <div class="score-box" style="position:relative; width: 160px; height: 160px; margin: 0 auto; display: flex; justify-content: center; align-items: center; background: radial-gradient(circle, rgba(14,165,233,0.1) 0%, transparent 60%); border-radius: 50%;">
+                    <svg style="position: absolute; width: 100%; height: 100%; transform: rotate(-90deg);">
+                        <circle cx="80" cy="80" r="70" fill="transparent" stroke="rgba(255,255,255,0.05)" stroke-width="12"></circle>
+                        <circle cx="80" cy="80" r="70" fill="transparent" stroke="url(#score-grad)" stroke-width="12" stroke-dasharray="440" stroke-dashoffset="${440 - ((data.match_score || 0) / 100 * 440)}" style="filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.8)); stroke-linecap: round;"></circle>
+                        <defs>
+                            <linearGradient id="score-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#38bdf8" />
+                                <stop offset="100%" stop-color="#a855f7" />
+                            </linearGradient>
+                        </defs>
                     </svg>
-                    <div class="score-text">
-                        <span style="color: ${getScoreColor(data.match_score)}">${data.match_score}%</span>
+                    <div style="z-index: 10; text-align: center;">
+                        <span style="font-size: 2.8rem; font-weight: 900; font-family: monospace; color: white;">${data.match_score || 0}%</span>
                     </div>
                 </div>
-                <p class="sub-label" style="margin-top: 1.5rem;">JD Relevance</p>
             </div>
 
             <!-- Summary Card -->
-            <div class="summary-card-main">
-                <h3><i class="fa-solid fa-clipboard-list"></i> Executive Summary</h3>
-                <p>${data.summary || "Analysis complete."}</p>
+            <div class="summary-card-main" style="flex: 2; padding-left: 2rem; border-left: 1px solid rgba(255,255,255,0.1); min-width: 300px;">
+                <h3 class="text-xl mb-4 text-sky-400" style="font-weight:bold;"><i class="fa-solid fa-server"></i> System Diagnostics</h3>
+                <p class="text-gray-300" style="line-height: 1.8; font-size: 1.05rem;">${data.summary || "Algorithm execution successfully resolved token match."}</p>
             </div>
         </div>
     `;

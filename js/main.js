@@ -5,12 +5,16 @@ import { initInterview } from './modules/interview.js';
 import { initArena } from './modules/arena.js';
 import { initResume } from './modules/resume.js';
 import { ensureAuth, logout, getCurrentUser } from './modules/auth.js';
+import { initWellness } from './modules/wellness.js';
+import { initMockTest } from './modules/mocktest.js';
+import { initPlanner } from './modules/planner.js';
+import { initLeaderboard } from './modules/leaderboard.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
     console.log('Bootstrapping Selectra AI...');
 
     // Auth Check
-    const user = ensureAuth();
+    const user = await ensureAuth();
     if (!user) return; // ensureAuth redirects
 
     // Populate User Info
@@ -31,6 +35,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     initInterview();
     initArena();
     initResume();
+    initWellness();
+    initMockTest();
+    initPlanner();
+    initLeaderboard();
 
     // Theme Toggle Logic
     const themeToggle = document.querySelector('.theme-toggle');

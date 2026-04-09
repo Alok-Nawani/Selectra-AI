@@ -1,0 +1,85 @@
+{
+    "modules": [
+        {
+            "id": "dsa",
+            "title": "Data Structures & Algorithms",
+            "desc": "Master the fundamentals of computer science with in-depth tutorials on Arrays, Linked Lists, Trees, and Dynamic Programming.",
+            "video": "https://www.youtube.com/embed/check_your_video_id",
+            "assignments": [
+                {
+                    "title": "Array Rotation Problem",
+                    "status": "Pending",
+                    "link": "#"
+                },
+                {
+                    "title": "Linked List Reversal",
+                    "status": "Completed",
+                    "link": "#"
+                },
+                {
+                    "title": "Binary Tree Traversal",
+                    "status": "Pending",
+                    "link": "#"
+                }
+            ],
+            "progress": 45
+        },
+        {
+            "id": "dbms",
+            "title": "Database Management Systems",
+            "desc": "Learn SQL, Normalization, ACID properties, and how to design scalable database schemas.",
+            "video": "https://www.youtube.com/embed/DlCkHhnEkco",
+            "assignments": [
+                {
+                    "title": "Write complex SQL Joins",
+                    "status": "Pending",
+                    "link": "#"
+                },
+                {
+                    "title": "Normalization Normal Forms",
+                    "status": "Pending",
+                    "link": "#"
+                }
+            ],
+            "progress": 10
+        },
+        {
+            "id": "os",
+            "title": "Operating Systems",
+            "desc": "Understand Process Management, Memory Management, Concurrency",
+            "video": "https://www.youtube.com/embed/DlCkHhnEkco",
+            "assignments": [
+                {
+                    "title": "OS Basics",
+                    "status": "Pending",
+                    "link": "#"
+                }
+            ],
+            "progress": 0
+        },
+        {
+            "id": "cn",
+            "title": "Computer Networks",
+            "desc": "OSI Model, TCP/IP, HTTP/HTTPS, and Socket Programming.",
+            "video": "https://www.youtube.com/embed/DlCkHhnEkco",
+            "assignments": [],
+            "progress": 0
+        },
+        {
+            "id": "oop",
+            "title": "Object-Oriented Programming",
+            "desc": "Classes, Inheritance, Polymorphism, and Design Patterns.",
+            "video": "https://www.youtube.com/embed/DlCkHhnEkco",
+            "assignments": [],
+            "progress": 80
+        },
+        {
+            "id": "ai",
+            "title": "AI & Machine Learning",
+            "desc": "Create basic models and understand AI concepts.",
+            "video": "https://www.youtube.com/embed/DlCkHhnEkco",
+            "assignments": [],
+            "progress": 0
+        }
+    ]
+}

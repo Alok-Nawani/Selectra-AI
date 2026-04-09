@@ -9,8 +9,8 @@ const CONFIG = {
     DEEPGRAM_URL: "wss://api.deepgram.com/v1/listen?smart_format=true&model=nova-2&language=en-US",
 
     API_URL: window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-        ? 'http://localhost:5001'
-        : 'https://selectra-ai.onrender.com',
+        ? 'http://localhost:3000'
+        : '',
 
     // Function to load keys from backend
     async loadRemoteConfig() {

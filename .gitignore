@@ -1,8 +1,9 @@
 node_modules/
 .env
 .DS_Store
-dist/
-coverage/
-.vscode/
-.idea/
 *.log
+api/temp_execution/
+backend/temp_execution/
+.vercel
+dist/
+build/

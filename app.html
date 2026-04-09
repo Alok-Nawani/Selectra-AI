@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selectra AI | Prepare Smart. Get Selected.</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/arena-premium.css">
     <link rel="stylesheet" href="css/ai_avatar.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
@@ -36,6 +37,11 @@
                 <li><a href="#mock-interview"><i class="fa-solid fa-user-tie"></i> Mock Interview</a></li>
                 <li><a href="#coding-arena"><i class="fa-solid fa-code"></i> Coding Arena</a></li>
                 <li><a href="#resume-analyzer"><i class="fa-solid fa-file-contract"></i> Resume Audit</a></li>
+                <li><a href="#wellness"><i class="fa-solid fa-leaf"></i> Wellness</a></li>
+                <li><a href="#notes-hub"><i class="fa-solid fa-book"></i> Notes Hub</a></li>
+                <li><a href="#mock-tests"><i class="fa-solid fa-stopwatch"></i> Mock Tests</a></li>
+                <li><a href="#study-planner"><i class="fa-solid fa-calendar-check"></i> Study Planner</a></li>
+                <li><a href="#leaderboard"><i class="fa-solid fa-trophy"></i> Leaderboard</a></li>
             </ul>
             <div class="user-profile" id="user-profile-section">
                 <div class="avatar">
@@ -153,7 +159,7 @@
                                     <h4>Dynamic Programming</h4>
                                     <p>Solve 5 "Medium" level DP problems.</p>
                                 </div>
-                                <button class="btn-micro">Go</button>
+                                <a href="#coding-arena" class="btn-micro" style="text-decoration:none;">Go</a>
                             </li>
                             <li>
                                 <div class="rec-icon"><i class="fa-solid fa-database"></i></div>
@@ -161,7 +167,7 @@
                                     <h4>Database Normalization</h4>
                                     <p>Review 3NF and BCNF concepts.</p>
                                 </div>
-                                <button class="btn-micro">Review</button>
+                                <a href="#learning" class="btn-micro" style="text-decoration:none;">Review</a>
                             </li>
                             <li>
                                 <div class="rec-icon"><i class="fa-solid fa-microphone"></i></div>
@@ -169,7 +175,7 @@
                                     <h4>Behavioral Interview</h4>
                                     <p>Practice "Tell me about yourself".</p>
                                 </div>
-                                <button class="btn-micro">Practice</button>
+                                <a href="#mock-interview" class="btn-micro" style="text-decoration:none;">Practice</a>
                             </li>
                         </ul>
                     </div>
@@ -190,34 +196,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Today, 10:30 AM</td>
-                                    <td>Two Sum</td>
-                                    <td>Coding</td>
-                                    <td>100%</td>
-                                    <td><span class="status-pill success">Pass</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Yesterday</td>
-                                    <td>Normal Forms Quiz</td>
-                                    <td>Quiz</td>
-                                    <td>8/10</td>
-                                    <td><span class="status-pill success">Good</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Feb 12</td>
-                                    <td>Mock Interview #3</td>
-                                    <td>Interview</td>
-                                    <td>Needs Improvement</td>
-                                    <td><span class="status-pill warning">Review</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Feb 10</td>
-                                    <td>Graph Traversal</td>
-                                    <td>Coding</td>
-                                    <td>Runtime Error</td>
-                                    <td><span class="status-pill error">Fail</span></td>
-                                </tr>
+                                <!-- Empty state by default -->
                             </tbody>
                         </table>
                     </div>
@@ -478,33 +457,54 @@
 
                 <div class="analyzer-grid">
                     <!-- Input Zone -->
-                    <div class="card upload-card">
-                        <h3>1. Upload Resume</h3>
-                        <div class="drop-zone" id="drop-zone"
-                            onclick="document.getElementById('resume-upload').click()">
-                            <i class="fa-solid fa-cloud-arrow-up"></i>
-                            <p>Drag & drop your PDF/Text here or <span class="highlight">browse</span></p>
+                    <div class="card upload-card" style="background: linear-gradient(180deg, #1e293b, #0f172a); border: 1px solid rgba(14, 165, 233, 0.3); border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                        <h3 style="color: #38bdf8; font-weight: bold; margin-bottom: 1rem;"><i class="fa-solid fa-microchip"></i> Resume Intelligence Engine</h3>
+                        <div class="drop-zone" id="drop-zone" style="height: 220px; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 2px dashed rgba(14,165,233,0.4); border-radius: 16px; background: rgba(14,165,233,0.02); cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden;" onclick="document.getElementById('resume-upload').click()">
+                            <div id="scan-laser" style="position: absolute; width: 100%; height: 3px; background: #38bdf8; box-shadow: 0 0 20px 8px rgba(56, 189, 248, 0.6); top: -10px; opacity: 0; transition: opacity 0.3s; animation: scanAnim 2.5s infinite linear alternate paused;"></div>
+                            <div id="drop-icon" style="transition: transform 0.3s;"><i class="fa-solid fa-file-shield text-5xl mb-4 text-sky-400" style="filter: drop-shadow(0 0 15px rgba(56,189,248,0.5));"></i></div>
+                            <p class="text-lg text-gray-300 font-semibold mb-1">Drag & Drop Resume Data</p>
+                            <p class="text-sm text-gray-500">or <span class="text-sky-400 underline">Browse Local Files</span> (.pdf, .doc)</p>
                             <input type="file" id="resume-upload" accept=".pdf,.txt" hidden>
                         </div>
-                        <div id="file-name" class="file-name hidden"></div>
+                        <div id="file-name" class="file-name hidden" style="margin-top: 1rem; text-align: center; color: #a855f7; font-weight: bold; background: rgba(168,85,247,0.1); padding: 0.5rem; border-radius: 8px;"></div>
+                        
+                        <style>
+                            @keyframes scanAnim {
+                                0% { top: 0%; }
+                                100% { top: 100%; }
+                            }
+                            .drop-zone.dragover { background: rgba(14,165,233,0.1); border-color: #38bdf8; transform: scale(1.02); }
+                            .drop-zone.dragover #drop-icon { transform: scale(1.1); }
+                            .drop-zone.scanning #scan-laser { opacity: 1; animation-play-state: running; }
+                        </style>
 
-                        <h3 class="mt-2">2. Job Description</h3>
-                        <textarea id="jd-input" placeholder="Paste the Job Description (JD) here..."
-                            rows="6"></textarea>
+                        <h3 class="mt-4 mb-2 text-gray-300" style="font-size: 0.95rem;"><i class="fa-solid fa-briefcase"></i> Target Job Description</h3>
+                        <textarea id="jd-input" placeholder="Paste the Job Description (JD) to calibrate AI matching algorithms..."
+                            rows="5" style="border-radius: 12px; background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1); padding: 1rem; color: white; resize: none; margin-bottom: 1.5rem;"></textarea>
 
-                        <button class="btn-primary w-100" id="analyze-btn">
-                            <i class="fa-solid fa-wand-magic-sparkles"></i> Analyze Resume
+                        <button class="btn-primary w-100" id="analyze-btn" style="border-radius: 30px; padding: 1rem; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(14,165,233,0.4); transition: transform 0.2s;">
+                            <i class="fa-solid fa-radar text-xl mr-2"></i> Execute AI Analysis
                         </button>
                     </div>
 
                     <!-- Analysis Result (Initially Hidden) -->
                     <div class="card result-card hidden" id="analysis-result">
-                        <h3>Analysis Report</h3>
-                        <div class="score-box">
-                            <div class="score-circle">
-                                <span id="match-score">0%</span>
+                        <h3 style="color: white; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem; margin-bottom: 1.5rem;"><i class="fa-solid fa-chart-pie text-sky-400"></i> AI Match Calibrations</h3>
+                        <div class="score-box" style="position:relative; width: 160px; height: 160px; margin: 0 auto 2.5rem auto; display: flex; justify-content: center; align-items: center; background: radial-gradient(circle, rgba(14,165,233,0.1) 0%, transparent 60%); border-radius: 50%;">
+                            <svg style="position: absolute; width: 100%; height: 100%; transform: rotate(-90deg);">
+                                <circle cx="80" cy="80" r="70" fill="transparent" stroke="rgba(255,255,255,0.05)" stroke-width="12"></circle>
+                                <circle id="score-ring" cx="80" cy="80" r="70" fill="transparent" stroke="url(#score-grad)" stroke-width="12" stroke-dasharray="440" stroke-dashoffset="440" style="transition: stroke-dashoffset 2s cubic-bezier(0.2, 0.8, 0.2, 1); filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.8)); stroke-linecap: round;"></circle>
+                                <defs>
+                                    <linearGradient id="score-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#38bdf8" />
+                                        <stop offset="100%" stop-color="#a855f7" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div style="z-index: 10; text-align: center;">
+                                <span id="match-score" style="font-size: 3rem; font-weight: 900; font-family: monospace; color: white;">0%</span>
+                                <p style="font-size: 0.85rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 2px;">Match</p>
                             </div>
-                            <p>Match Score</p>
                         </div>
 
                         <div class="analysis-details">
@@ -568,71 +568,95 @@
                 </div>
 
                 <!-- Step 2: Active Interview -->
-                <div id="interview-active" class="hidden">
-                    <div class="interview-header-bar">
-                        <div class="interview-meta">
-                            <span class="badge" id="interview-meta-company">Amazon</span>
-                            <span class="badge" id="interview-meta-type">Technical</span>
+                <div id="interview-active" class="hidden" style="max-width: 1200px; margin: 0 auto;">
+                    <div class="interview-header-bar" style="background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(10px); border-radius: 12px; padding: 1rem 2rem; margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center;">
+                        <div class="interview-meta" style="display: flex; gap: 1rem;">
+                            <span class="badge" id="interview-meta-company" style="background: #3b82f6; color: white; padding: 0.4rem 1rem; border-radius: 20px; font-weight: bold; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Amazon</span>
+                            <span class="badge" id="interview-meta-type" style="background: rgba(255,255,255,0.1); color: #94a3b8; padding: 0.4rem 1rem; border-radius: 20px; font-weight: bold; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.1);">Technical</span>
                         </div>
-                        <div class="timer-display" id="interview-timer">00:00</div>
-                        <button class="btn-secondary-sm" onclick="endInterviewEarly()">End Session</button>
+                        <div class="timer-display" id="interview-timer" style="font-family: monospace; font-size: 1.5rem; font-weight: bold; color: #ef4444; text-shadow: 0 0 10px rgba(239, 68, 68, 0.3);">00:00</div>
+                        <button class="btn-secondary-sm" onclick="endInterviewEarly()" style="background: #ef4444; color: white; border: none; padding: 0.5rem 1.2rem; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s hover:opacity-0.8;">End Session</button>
                     </div>
 
-                    <div class="interview-layout">
-                        <!-- Top: AI Avatar -->
-                        <div class="interview-avatar-container">
-                            <img src="assets/ai_avatar.png" alt="AI Interviewer" class="ai-avatar" id="ai-avatar-viz">
-                            <span class="ai-status-indicator" id="interview-status">Initializing...</span>
+                    <div class="interview-layout" style="display: grid; grid-template-columns: 1fr 350px; gap: 2rem; height: calc(100vh - 250px); min-height: 500px;">
+                        <!-- Main Video Feed Area -->
+                        <div class="main-feed" style="position: relative; background: #000; border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column;">
+                            <div class="interview-avatar-container" style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);">
+                                <div class="avatar-glow-ring" style="position: absolute; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, transparent 70%); animation: pulseGlow 4s infinite alternate;"></div>
+                                <img src="assets/ai_avatar.png" alt="AI Interviewer" class="ai-avatar" id="ai-avatar-viz" style="width: 220px; height: 220px; border-radius: 50%; border: 4px solid rgba(255,255,255,0.05); object-fit: cover; z-index: 2; box-shadow: 0 0 40px rgba(0,0,0,0.5);">
+                                <div id="voice-visualizer" style="display: flex; gap: 4px; align-items: flex-end; height: 40px; margin-top: 2rem; z-index: 2;">
+                                    <div class="v-bar" style="width: 4px; height: 10px; background: #38bdf8; border-radius: 2px;"></div>
+                                    <div class="v-bar" style="width: 4px; height: 25px; background: #38bdf8; border-radius: 2px;"></div>
+                                    <div class="v-bar" style="width: 4px; height: 15px; background: #38bdf8; border-radius: 2px;"></div>
+                                    <div class="v-bar" style="width: 4px; height: 35px; background: #38bdf8; border-radius: 2px;"></div>
+                                    <div class="v-bar" style="width: 4px; height: 20px; background: #38bdf8; border-radius: 2px;"></div>
+                                </div>
+                                <span class="ai-status-indicator" id="interview-status" style="position: absolute; bottom: 2rem; background: rgba(0,0,0,0.5); padding: 0.5rem 1.5rem; border-radius: 30px; font-size: 0.8rem; color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3);">AI Interviewer is Listening...</span>
+                            </div>
+                            
+                            <!-- Question Caption Overlay -->
+                            <div class="question-caption" style="background: rgba(0,0,0,0.7); backdrop-filter: blur(10px); padding: 2rem; border-top: 1px solid rgba(255,255,255,0.1); min-height: 120px;">
+                                <h3 style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-robot"></i> INTERVIEWER QUESTION</h3>
+                                <p id="ai-question" style="font-size: 1.2rem; line-height: 1.5; color: white; font-weight: 500;">Initializing session context...</p>
+                            </div>
                         </div>
 
-                        <div class="interview-panels">
-                            <!-- Left: AI Question -->
-                            <div class="panel ai-panel">
-                                <h3><i class="fa-solid fa-robot"></i> AI Interviewer</h3>
-                                <div class="question-display">
-                                    <p id="ai-question">Initializing...</p>
+                        <!-- Sidebar: Code & Transcript -->
+                        <div class="interview-sidebar" style="display: flex; flex-direction: column; gap: 1.5rem; overflow-y: auto;">
+                            <!-- Your Answer Box -->
+                            <div class="panel user-panel" style="background: rgba(30, 41, 59, 0.5); border-radius: 20px; padding: 1.5rem; border: 1px solid rgba(255,255,255,0.05); display: flex; flex-direction: column; flex: 1;">
+                                <h3 style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-microphone"></i> LIVE TRANSCRIPT</h3>
+                                <div class="transcript-display" id="live-transcript" style="flex: 1; font-size: 0.95rem; line-height: 1.6; color: #cbd5e1; font-style: italic;">
+                                    <p class="placeholder-text text-gray-500">Waiting for response...</p>
                                 </div>
                             </div>
 
-                            <!-- Right: Live Transcript -->
-                            <div class="panel user-panel">
-                                <h3><i class="fa-solid fa-user"></i> Your Answer</h3>
-                                <div class="transcript-display" id="live-transcript">
-                                    <p class="placeholder-text">Speak clearly into your microphone...</p>
+                            <!-- Integrated Code Editor -->
+                            <div id="interview-code-panel" class="hidden" style="background: #1e1e1e; border-radius: 20px; padding: 1.2rem; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 25px rgba(0,0,0,0.3);">
+                                <div class="flex justify-between items-center mb-3">
+                                    <h4 class="text-xs text-blue-400 uppercase tracking-widest font-bold">Code Scratchpad</h4>
+                                    <select id="interview-lang-select" style="background: #333; color: white; font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 4px; border: 1px solid #444;">
+                                        <option value="javascript">JS</option>
+                                        <option value="python">PY</option>
+                                        <option value="java">JV</option>
+                                        <option value="cpp">C++</option>
+                                    </select>
                                 </div>
-
-                                <!-- Embedded Code Editor (Initially Hidden/Collapsed) -->
-                                <div id="interview-code-panel" class="hidden mt-4 border-t border-glass pt-2">
-                                    <div class="flex justify-between items-center mb-2">
-                                        <h4 class="text-sm text-gray-400">Code Scratchpad</h4>
-                                        <select id="interview-lang-select"
-                                            class="bg-gray-800 text-xs p-1 rounded border border-gray-700">
-                                            <option value="javascript">JavaScript</option>
-                                            <option value="python">Python</option>
-                                            <option value="java">Java</option>
-                                            <option value="cpp">C++</option>
-                                        </select>
-                                    </div>
+                                <div style="height: 250px; border-radius: 8px; overflow: hidden; border: 1px solid #333;">
                                     <textarea id="interview-editor"></textarea>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Bottom Controls -->
-                        <div class="interview-controls">
-                            <button id="toggle-code-btn" class="btn-secondary-sm mr-2" title="Toggle Code Editor">
-                                <i class="fa-solid fa-code"></i> Code
-                            </button>
-                            <button id="start-answer-btn" class="btn-control start"><i
-                                    class="fa-solid fa-microphone"></i>
-                                Answer</button>
-                            <button id="stop-answer-btn" class="btn-control stop" disabled><i
-                                    class="fa-solid fa-stop"></i>
-                                Stop</button>
-                            <!-- Next button removed as per request -->
-                        </div>
+                    </div>
+                    
+                    <style>
+                        @keyframes pulseGlow {
+                            0% { transform: scale(1); opacity: 0.3; }
+                            100% { transform: scale(1.2); opacity: 0.6; }
+                        }
+                        .v-bar { animation: barGrow 1.5s infinite ease-in-out alternate; }
+                        .v-bar:nth-child(2) { animation-delay: 0.2s; }
+                        .v-bar:nth-child(3) { animation-delay: 0.4s; }
+                        .v-bar:nth-child(4) { animation-delay: 0.6s; }
+                        .v-bar:nth-child(5) { animation-delay: 0.8s; }
+                        @keyframes barGrow {
+                            0% { height: 5px; opacity: 0.4; }
+                            100% { height: 35px; opacity: 1; }
+                        }
+                    </style>
+                    <!-- Interaction Controls -->
+                    <div class="interview-controls" style="display: flex; gap: 1.5rem; justify-content: center; margin-top: 1.5rem; padding: 1.2rem; background: rgba(15, 23, 42, 0.4); border-top: 1px solid rgba(255,255,255,0.05); border-radius: 0 0 20px 20px;">
+                        <button id="start-answer-btn" class="btn-primary" style="border-radius: 30px; padding: 0.8rem 2rem; display: flex; align-items: center; gap: 0.8rem; font-weight: 700; box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);">
+                            <i class="fa-solid fa-microphone"></i> Answer
+                        </button>
+                        <button id="stop-answer-btn" class="btn-secondary" disabled style="border-radius: 30px; padding: 0.8rem 2rem; display: flex; align-items: center; gap: 0.8rem; font-weight: 700; opacity: 0.5;">
+                            <i class="fa-solid fa-stop"></i> Stop
+                        </button>
                     </div>
                 </div>
+
+
+
 
                 <!-- Step 3: Feedback/Result -->
                 <div id="interview-feedback" class="hidden">
@@ -873,6 +897,243 @@
                 </div>
             </section>
 
+            <!-- Wellness & Focus Mode Section -->
+            <section id="wellness" class="hidden">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-leaf"></i> Focus & Wellness</h2>
+                    <p>Stay focused and calm during intensive coding sessions.</p>
+                </div>
+                <div class="wellness-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                    <div class="card focus-timer" style="display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(145deg, #1e1e1e, #2a2a2a); border: 1px solid rgba(255,255,255,0.05);">
+                        <h3 style="color: var(--accent-cyan); font-weight: 600; letter-spacing: 1px;"><i class="fa-solid fa-clock"></i> Pomodoro Timer</h3>
+                        <div class="timer-display" id="pomodoro-time" style="font-size: 5rem; text-align: center; font-weight: 800; font-family: monospace; color: white; text-shadow: 0 0 20px rgba(56, 189, 248, 0.5); margin: 2rem 0;">25:00</div>
+                        <div style="display: flex; gap: 1rem; justify-content: center; width: 100%;">
+                            <button class="btn-primary" id="btn-pomodoro-start" style="flex: 1; border-radius: 20px; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);">Start</button>
+                            <button class="btn-secondary" id="btn-pomodoro-reset" style="flex: 1; border-radius: 20px;">Reset</button>
+                        </div>
+                    </div>
+                    <div class="card ambient-sounds" style="background: linear-gradient(145deg, #1e1e1e, #2a2a2a); border: 1px solid rgba(255,255,255,0.05);">
+                        <h3 style="color: var(--accent-cyan); font-weight: 600; letter-spacing: 1px; margin-bottom: 1rem;"><i class="fa-solid fa-headphones"></i> Ambient Sounds</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; max-height: 250px; overflow-y: auto; padding-right: 5px;" class="custom-scroll">
+                            <button class="btn-secondary sound-tile" id="btn-sound-meditation" style="flex-direction: column; padding: 1rem;"><i class="fa-solid fa-om text-purple-400 text-2xl mb-2"></i> <span>Meditation</span></button>
+                            <button class="btn-secondary sound-tile" id="btn-sound-rain" style="flex-direction: column; padding: 1rem;"><i class="fa-solid fa-cloud-rain text-blue-400 text-2xl mb-2"></i> <span>Forest Rain</span></button>
+                            <button class="btn-secondary sound-tile" id="btn-sound-ocean" style="flex-direction: column; padding: 1rem;"><i class="fa-solid fa-water text-cyan-400 text-2xl mb-2"></i> <span>Ocean Waves</span></button>
+                            <button class="btn-secondary sound-tile" id="btn-sound-birds" style="flex-direction: column; padding: 1rem;"><i class="fa-solid fa-dove text-green-400 text-2xl mb-2"></i> <span>Morning Birds</span></button>
+                            <button class="btn-secondary sound-tile" id="btn-sound-flute1" style="flex-direction: column; padding: 1rem;"><i class="fa-solid fa-music text-orange-400 text-2xl mb-2"></i> <span>Zen Flute I</span></button>
+                            <button class="btn-secondary sound-tile" id="btn-sound-flute2" style="flex-direction: column; padding: 1rem;"><i class="fa-solid fa-music text-orange-400 text-2xl mb-2"></i> <span>Zen Flute II</span></button>
+                        </div>
+                        <button class="btn-secondary w-100" id="btn-sound-stop" style="display: none; border-color: #ef4444; color: #ef4444; margin-top: 1rem; border-radius: 20px;"><i class="fa-solid fa-stop-circle"></i> Stop Audio</button>
+                        <audio id="audio-player" loop></audio>
+                    </div>
+                    
+                    <style>
+                        @keyframes breatheGlow {
+                            0% { box-shadow: 0 0 10px rgba(56, 189, 248, 0.2); }
+                            50% { box-shadow: 0 0 60px rgba(56, 189, 248, 0.8); }
+                            100% { box-shadow: 0 0 10px rgba(56, 189, 248, 0.2); }
+                        }
+                        .sound-tile { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; background: rgba(255,255,255,0.02); }
+                        .sound-tile:hover { transform: translateY(-3px); border-color: var(--accent-cyan); background: rgba(56, 189, 248, 0.05); }
+                        .sound-tile.active-glow { animation: pulseCyan 2s infinite; }
+                        @keyframes pulseCyan {
+                            0% { box-shadow: 0 0 10px rgba(56, 189, 248, 0.1); }
+                            50% { box-shadow: 0 0 25px rgba(56, 189, 248, 0.3); }
+                            100% { box-shadow: 0 0 10px rgba(56, 189, 248, 0.1); }
+                        }
+                    </style>
+
+                    <div class="card breathing-exercise" style="grid-column: 1 / -1; text-align: center; padding: 4rem; background: radial-gradient(circle at center, #1a2a3a 0%, #121212 100%); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 20px;">
+                        <h3 style="color: var(--accent-cyan); font-size: 1.8rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-lungs"></i> Box Breathing</h3>
+                        <p style="margin-bottom: 3rem; color: #9ca3af;">Follow the expanding circle to regulate your nervous system.</p>
+                        <div class="breathing-circle-wrapper" style="position: relative; width: 200px; height: 200px; margin: 0 auto;">
+                            <div class="breathing-circle" id="breathing-circle" style="width: 100%; height: 100%; border-radius: 50%; background: radial-gradient(circle, rgba(56,189,248,0.4) 0%, transparent 70%); margin: 0 auto; transition: transform 2s ease-in-out; animation: breatheGlow 8s infinite;"></div>
+                            <h4 id="breathing-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); margin: 0; font-size: 1.5rem; color: white; font-weight: bold; text-shadow: 0 2px 5px rgba(0,0,0,0.5);">Ready</h4>
+                        </div>
+                        <button class="btn-primary" id="btn-breathe-start" style="margin-top: 3rem; border-radius: 30px; padding: 0.75rem 2rem; font-size: 1.1rem; box-shadow: 0 5px 20px rgba(59, 130, 246, 0.5);"><i class="fa-solid fa-play"></i> Start Exercise</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Notes & Revision Hub -->
+            <section id="notes-hub" class="hidden">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-book"></i> Notes & Revision Hub</h2>
+                    <p>Keep your personal notes and bookmarks here.</p>
+                </div>
+                <div class="notes-layout" style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                    <div class="card" style="flex: 1; min-width: 300px;">
+                        <h3>Create Note</h3>
+                        <textarea id="personal-notes" placeholder="Write your revision notes here..." style="width: 100%; height: 300px; background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 1rem; border-radius: 8px; font-family: inherit; margin-top: 1rem;"></textarea>
+                        <button class="btn-primary w-100" style="margin-top: 1rem;" id="btn-save-notes">Save Note</button>
+                    </div>
+                    <div class="card" style="flex: 2; min-width: 300px;">
+                        <h3>Saved Notes</h3>
+                        <div id="saved-notes-container" style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; max-height: 60vh; overflow-y: auto; padding-right: 10px;">
+                            <!-- Sticky notes inject here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mock Tests (Dynamic) -->
+            <section id="mock-tests" class="hidden">
+                 <div class="section-header">
+                    <h2><i class="fa-solid fa-stopwatch"></i> Dynamic Mock Tests</h2>
+                    <p>Pre-defined question sets randomized from a pool of 500 to benchmark your knowledge.</p>
+                </div>
+                
+                <div id="mock-test-selector" class="module-grid">
+                    <div class="module-card">
+                        <h3>Grand Tech Sprint</h3>
+                        <p>50 Random Questions • 60 Minutes</p>
+                        <button class="btn-secondary w-100" style="margin-top: 1rem;" id="btn-start-mock-50">Start 50 Q Test</button>
+                    </div>
+                    <div class="module-card">
+                        <h3>Quick Review</h3>
+                        <p>10 Random Questions • 15 Minutes</p>
+                        <button class="btn-secondary w-100" style="margin-top: 1rem;" id="btn-start-mock-10">Start 10 Q Test</button>
+                    </div>
+                </div>
+
+                <div id="mock-test-active" class="hidden" style="max-width: 900px; margin: 0 auto;">
+                    <!-- Sticky Top Bar -->
+                    <div style="position: sticky; top: 0; z-index: 100; background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(10px); padding: 1rem 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 10px; height: 10px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 10px #22c55e;"></div>
+                            <h3 id="mock-test-progress" style="font-size: 1rem; color: #94a3b8; margin: 0; font-weight: 500;">Question 1 / 50</h3>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <i class="fa-solid fa-clock text-sky-400"></i>
+                            <div id="mock-test-timer" style="font-size: 1.8rem; color: white; font-weight: 900; font-family: monospace; letter-spacing: 2px;">--:--</div>
+                        </div>
+                    </div>
+
+                    <div class="card exam-card" style="padding: 3rem; background: #1e293b; border: 1px solid rgba(255,255,255,0.05); border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.4); min-height: 400px; position: relative;">
+                        <!-- Question Text -->
+                        <div style="margin-bottom: 3rem;">
+                            <span style="font-size: 0.8rem; color: #38bdf8; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 1rem;">Core Problem</span>
+                            <div id="mock-test-question" style="font-size: 1.5rem; line-height: 1.6; color: white; font-weight: 500;">Loading question data from AI pool...</div>
+                        </div>
+
+                        <!-- Options Section -->
+                        <div id="mock-test-options" style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
+                            <!-- Options injected with modern style -->
+                        </div>
+                        
+                        <style>
+                            .btn-mock-option {
+                                background: rgba(255,255,255,0.02);
+                                border: 1px solid rgba(255,255,255,0.05);
+                                padding: 1.2rem 2rem;
+                                border-radius: 12px;
+                                text-align: left;
+                                cursor: pointer;
+                                transition: all 0.2s;
+                                color: #94a3b8;
+                                font-size: 1.1rem;
+                                display: flex;
+                                align-items: center;
+                                gap: 1rem;
+                            }
+                            .btn-mock-option:hover { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); transform: translateX(5px); }
+                            .btn-mock-option.selected { background: rgba(14, 165, 233, 0.1); border-color: #38bdf8; color: white; box-shadow: 0 0 15px rgba(56, 189, 248, 0.2); }
+                            .btn-mock-option .opt-idx { width: 30px; height: 30px; background: rgba(255,255,255,0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(255,255,255,0.1); }
+                            .btn-mock-option.selected .opt-idx { background: #38bdf8; color: #0f172a; border-color: #38bdf8; }
+                        </style>
+                    </div>
+
+                    <!-- Bottom Navigation Panel -->
+                    <div style="margin-top: 2rem; display: flex; justify-content: space-between; align-items: center; background: rgba(15, 23, 42, 0.5); padding: 1.5rem 2rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05);">
+                        <button class="btn-secondary" id="btn-mock-prev" disabled style="border-radius: 12px; padding: 0.8rem 1.5rem;"><i class="fa-solid fa-chevron-left"></i> Previous</button>
+                        <div id="mock-test-pagination" style="display: flex; gap: 0.5rem; overflow-x: auto; max-width: 400px; padding: 0.5rem;" class="custom-scroll">
+                            <!-- Page dots injected here -->
+                        </div>
+                        <button class="btn-primary" id="btn-mock-next" style="border-radius: 12px; padding: 0.8rem 1.5rem; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);">Save & Next <i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </section>
+            <!-- Study Planner & Goal Tracker Section -->
+            <section id="study-planner" class="hidden">
+                <div class="section-header">
+                    <h2>📅 Study Planner & Goal Tracker</h2>
+                    <p>Track your daily goals, build your streak, and never miss a target.</p>
+                </div>
+                <div class="dashboard-grid" style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+                    <!-- Goal Tracker -->
+                        <div class="card" id="daily-goals-card" style="background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255,255,255,0.05); border-radius: 20px; padding: 2.5rem;">
+                        <h3 style="color: white; font-size: 1.3rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem;"><i class="fa-solid fa-flag-checkered" style="color: #38bdf8;"></i> Active Objectives</h3>
+                        <ul class="module-topic-list" id="goals-list" style="margin-top: 1rem; list-style: none; padding: 0;">
+                            <!-- Injected by JS: Modern Checklist -->
+                        </ul>
+                    </div>
+
+                    <!-- Streak & Growth -->
+                    <div style="display: flex; flex-direction: column; gap: 2rem;">
+                         <div class="card" style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(135deg, #fb923c 0%, #f97316 100%); border: none; border-radius: 24px; padding: 3rem; color: white;">
+                             <i class="fa-solid fa-fire-flame-curved" style="font-size: 3rem; margin-bottom: 1rem; filter: drop-shadow(0 0 10px rgba(255,255,255,0.4));"></i>
+                            <h3 style="color: white; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; font-size: 1rem;">Daily Streak</h3>
+                            <div style="font-size: 6rem; font-weight: 900; line-height: 1;" id="streak-display">1</div>
+                            <p style="opacity: 0.8; font-size: 0.9rem; margin-top: 1rem;">Keep the fire burning!</p>
+                        </div>
+
+                        <div class="card" style="padding: 2rem; background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255,255,255,0.05); border-radius: 20px;">
+                            <h4 style="font-size: 0.8rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;">Personal Growth</h4>
+                            <div style="height: 12px; background: #0f172a; border-radius: 10px; position: relative; overflow: hidden; margin-bottom: 0.5rem;">
+                                <div id="planner-overall-progress" style="position: absolute; left: 0; top: 0; height: 100%; width: 33%; background: linear-gradient(90deg, #38bdf8, #818cf8); transition: width 1s cubic-bezier(0.1, 0.8, 0.2, 1); border-radius: 10px; box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);"></div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #64748b;">
+                                <span>Level Progress</span>
+                                <span id="planner-progress-percent">33%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Leaderboard & Gamification Section -->
+            <section id="leaderboard" class="hidden">
+                <div class="section-header">
+                    <h2>🏆 Global Leaderboard</h2>
+                    <p>Compare your XP against your peers and collect badges.</p>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="card" id="leaderboard-card" style="grid-column: 1 / -1; background: linear-gradient(180deg, #1e293b, #0f172a); border-radius: 24px; border: 1px solid rgba(255,255,255,0.05); padding: 3rem;">
+                        <h3 style="text-align: center; color: var(--accent-cyan); font-size: 1.5rem; margin-bottom: 3rem; text-transform: uppercase; letter-spacing: 2px;">Elite Rankings</h3>
+                        
+                        <!-- Podium Area -->
+                        <div id="leaderboard-podium" style="display: flex; justify-content: center; align-items: flex-end; gap: 2rem; margin-bottom: 4rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                            <!-- Injected by JS: 2nd, 1st, 3rd -->
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="styled-table" style="width: 100%; border-collapse: separate; border-spacing: 0 0.5rem;">
+                                <thead style="background: rgba(255,255,255,0.02);">
+                                    <tr>
+                                        <th style="padding: 1rem; border-radius: 8px 0 0 8px;">Rank</th>
+                                    <th>Student</th>
+                                    <th>XP</th>
+                                    <th>Title</th>
+                                </tr>
+                            </thead>
+                            <tbody id="leaderboard-body">
+                                <!-- Injected by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                    </div> <!-- Added missing closure for leaderboard-card -->
+
+                    <div class="card" id="badges-card">
+                        <h3>Your Badges</h3>
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;" id="badges-container">
+                            <!-- Injected by JS -->
+                        </div>
+                        <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(59, 130, 246, 0.1); border-radius: 8px;">
+                            <h4 style="color: var(--accent-blue);">Current XP: <span id="user-xp-display">0</span></h4>
+                            <p style="font-size: 0.9rem; margin-top: 0.5rem; color: var(--text-secondary);">Earn XP by completing quizzes and coding problems.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
     </div>
 

@@ -443,7 +443,7 @@ async function startQuiz() {
     if (!currentModuleId) return;
 
     try {
-        const data = await fetchData(`../data/learning/quizzes/${currentModuleId}.json`);
+        const data = await fetchData(`data/learning/quizzes/${currentModuleId}.json`);
         if (!data || data.length === 0) {
             alert("No quiz available for this module.");
             return;

@@ -177,15 +177,57 @@ function openProblem(id) {
         document.getElementById('p-example').innerText = `Input: ${example.input}\nOutput: ${example.output}`;
     }
 
+    // Update Submissions Tab
+    if (typeof window.renderSubmissionsTab === 'function') window.renderSubmissionsTab();
+
+    // Update Editorial Tab
+    const editorialHTML = `
+        <div class="p-6">
+            <h3 class="text-2xl font-bold mb-4"><i class="fa-solid fa-book-open"></i> Problem Editorial</h3>
+            <div class="bg-[#282828] p-4 rounded-lg mb-4 text-gray-300">
+                <p class="mb-2"><strong>Approach:</strong> Use highly optimized data structures to map states.</p>
+                <p>This is a simulated breakdown tailored towards mastering the algorithmic pattern for ${currentProblem.title}.</p>
+            </div>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded font-bold w-full transition" onclick="alert('Selectra AI is generating advanced insights...')">
+                <i class="fa-solid fa-sparkles"></i> Generate Deep AI Explanation
+            </button>
+        </div>
+    `;
+    const edTab = document.getElementById('tab-editorial');
+    if (edTab) edTab.innerHTML = editorialHTML;
+
+    // Update Solutions Tab
+    const solutionsHTML = `
+        <div class="p-6">
+            <h3 class="text-2xl font-bold mb-4"><i class="fa-solid fa-users"></i> Community Solutions</h3>
+            <div class="space-y-4">
+                <div class="bg-[#282828] border border-gray-700 rounded-lg p-4 cursor-pointer hover:border-blue-500 transition">
+                    <div class="flex justify-between items-center">
+                        <span class="text-blue-400 font-bold"><i class="fa-brands fa-python"></i> Python (Optimal O(N))</span>
+                        <span class="text-gray-500 text-sm"><i class="fa-solid fa-star text-yellow-500"></i> 1.2k</span>
+                    </div>
+                </div>
+                <div class="bg-[#282828] border border-gray-700 rounded-lg p-4 cursor-pointer hover:border-blue-500 transition">
+                    <div class="flex justify-between items-center">
+                        <span class="text-green-500 font-bold"><i class="fa-brands fa-java"></i> Java (Space-Optimized)</span>
+                        <span class="text-gray-500 text-sm"><i class="fa-solid fa-star text-yellow-500"></i> 842</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    const solTab = document.getElementById('tab-solutions');
+    if (solTab) solTab.innerHTML = solutionsHTML;
+
     // Update Editor
     initCodeEditor(currentProblem.starter_code.javascript || "// Write your code here");
 
     // Handle language change to update starter code
     // Default Templates
     const starterTemplates = {
-        'cpp': `#include <iostream>\n#include <vector>\n#include <string>\nusing namespace std;\n\nclass Solution {\npublic:\n    void solve() {\n        // Your code here\n    }\n};\n\nint main() {\n    Solution sol;\n    sol.solve();\n    return 0;\n}`,
-        'java': `import java.util.*;\n\npublic class Solution {\n    public static void main(String[] args) {\n        // Your code here\n        System.out.println("Hello World");\n    }\n}`,
-        'python': `def solve():\n    # Your code here\n    pass\n\nif __name__ == "__main__":\n    solve()`,
+        'cpp': `#include <iostream>\n#include <vector>\n#include <string>\nusing namespace std;\n\nclass Solution {\npublic:\n    void solve() {\n        cout << "Finished" << endl;\n    }\n};\n\nint main() {\n    Solution sol;\n    sol.solve();\n    return 0;\n}`,
+        'java': `import java.util.*;\n\npublic class Solution {\n    public static void main(String[] args) {\n        System.out.println("Finished");\n    }\n}`,
+        'python': `def solve():\n    print("Finished")\n\nif __name__ == "__main__":\n    solve()`,
         'javascript': `function solve() {\n    // Your code here\n}\n\nsolve();`,
         'csharp': `using System;\n\npublic class Solution {\n    public static void Main(string[] args) {\n        // Your code here\n    }\n}`
     };
@@ -353,6 +395,8 @@ function setupEditorEvents() {
                 const titleColor = isSuccess ? '#10b981' : '#ef4444';
 
                 if (isSuccess) {
+                    window.dispatchEvent(new CustomEvent('goal-completed', { detail: { goalId: 'dsa' } }));
+
                     const progress = getProgress();
                     if (progress) {
                         progress.xp = (progress.xp || 0) + (currentProblem?.points || 500);
@@ -367,6 +411,17 @@ function setupEditorEvents() {
                         if (xpEl) xpEl.innerText = `Level ${progress.level || 1} (${progress.xp || 0} XP)`;
                     }
                 }
+
+                // Push to Submission History Tab
+                if (!window.submissionsHistory) window.submissionsHistory = [];
+                window.submissionsHistory.push({
+                    title: currentProblem?.title,
+                    status: isSuccess ? 'Accepted' : 'Wrong Answer',
+                    runtime: Math.floor(Math.random() * 50) + 10,
+                    language: language,
+                    time: new Date().toLocaleTimeString()
+                });
+                if (typeof window.renderSubmissionsTab === 'function') window.renderSubmissionsTab();
 
                 // Final Result Card
                 consoleOutput.innerHTML = `
@@ -403,3 +458,61 @@ function setupEditorEvents() {
         });
     }
 }
+
+window.renderSubmissionsTab = () => {
+    const tab = document.getElementById('tab-submissions');
+    if (!tab) return;
+    
+    if (!window.submissionsHistory || window.submissionsHistory.length === 0) {
+        tab.innerHTML = `
+            <div class="empty-state">
+                <i class="fa-regular fa-clock text-gray-400"></i>
+                <h3>No Submissions</h3>
+                <p>You haven't submitted this problem yet.</p>
+            </div>
+        `;
+        return;
+    }
+    
+    const filtered = window.submissionsHistory.filter(s => s.title === currentProblem?.title).reverse();
+    if (filtered.length === 0) {
+        tab.innerHTML = `
+            <div class="empty-state">
+                <i class="fa-regular fa-clock text-gray-400"></i>
+                <h3>No Submissions</h3>
+                <p>You haven't submitted this problem yet.</p>
+            </div>
+        `;
+        return;
+    }
+
+    tab.innerHTML = `
+        <div class="p-6 animate-fade-in">
+            <h3 class="text-2xl font-bold mb-4"><i class="fa-solid fa-clock-rotate-left"></i> Submission History</h3>
+            <div class="overflow-x-auto rounded-lg border border-gray-700">
+                <table class="w-full text-left text-sm text-gray-400">
+                    <thead class="text-xs uppercase bg-[#333] text-gray-300">
+                        <tr>
+                            <th class="px-4 py-3">Status</th>
+                            <th class="px-4 py-3">Language</th>
+                            <th class="px-4 py-3">Runtime</th>
+                            <th class="px-4 py-3">Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${filtered.map(sub => `
+                            <tr class="border-b border-gray-700 hover:bg-[#282828] transition max-h-[50px]">
+                                <td class="px-4 py-3 font-bold ${sub.status === 'Accepted' ? 'text-green-500' : 'text-red-500'}">
+                                    ${sub.status === 'Accepted' ? '<i class="fa-solid fa-check"></i>' : '<i class="fa-solid fa-xmark"></i>'} ${sub.status}
+                                </td>
+                                <td class="px-4 py-3 text-gray-300">${sub.language}</td>
+                                <td class="px-4 py-3 font-mono">${sub.runtime} ms</td>
+                                <td class="px-4 py-3 text-gray-500">${sub.time}</td>
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    `;
+};

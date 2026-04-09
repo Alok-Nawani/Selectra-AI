@@ -251,8 +251,7 @@ async function startSession() {
 function setupControls() {
     const startBtn = document.getElementById('start-answer-btn');
     const stopBtn = document.getElementById('stop-answer-btn');
-    const nextBtn = document.getElementById('next-question-btn');
-
+    
     if (startBtn) startBtn.addEventListener('click', startRecording);
     if (stopBtn) stopBtn.addEventListener('click', stopRecording);
 
@@ -278,7 +277,7 @@ async function startRecording() {
         document.getElementById('interview-status').innerText = "Listening (Deepgram AI)...";
         document.getElementById('interview-status').style.color = "#ef4444";
         // Ensure visualizer exists before adding class
-        const viz = document.getElementById('waveform-viz');
+        const viz = document.getElementById('voice-visualizer');
         if (viz) viz.classList.add('active');
 
         document.getElementById('start-answer-btn').disabled = true;

@@ -1,0 +1,66 @@
+{
+    "user": "Student Profile",
+    "readiness_score": 72,
+    "subject_performance": [
+        {
+            "subject": "DSA",
+            "score": 75,
+            "color": "#3b82f6"
+        },
+        {
+            "subject": "DBMS",
+            "score": 45,
+            "color": "#10b981"
+        },
+        {
+            "subject": "OS",
+            "score": 60,
+            "color": "#f59e0b"
+        },
+        {
+            "subject": "CN",
+            "score": 30,
+            "color": "#ef4444"
+        },
+        {
+            "subject": "OOP",
+            "score": 85,
+            "color": "#8b5cf6"
+        },
+        {
+            "subject": "AI/ML",
+            "score": 20,
+            "color": "#06b6d4"
+        }
+    ],
+    "history": [
+        {
+            "date": "Today, 10:30 AM",
+            "module": "Two Sum",
+            "type": "Coding",
+            "result": "100%",
+            "status": "pass"
+        },
+        {
+            "date": "Yesterday",
+            "module": "Normal Forms Quiz",
+            "type": "Quiz",
+            "result": "8/10",
+            "status": "good"
+        },
+        {
+            "date": "Feb 12",
+            "module": "Mock Interview #3",
+            "type": "Interview",
+            "result": "Needs Improvement",
+            "status": "warning"
+        },
+        {
+            "date": "Feb 10",
+            "module": "Graph Traversal",
+            "type": "Coding",
+            "result": "Runtime Error",
+            "status": "error"
+        }
+    ]
+}

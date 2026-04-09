@@ -1,0 +1,328 @@
+/* 
+  PREMIUM ARENA STYLES
+  Mimics the Dark VSCode / LeetCode Aesthetic
+*/
+
+/* Workspace wrapper */
+.arena-workspace {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    background-color: #000000;
+    color: #cccccc;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: -2rem; /* Negate the generic main-content padding */
+    padding: 0.5rem;
+}
+
+/* Header within Arena */
+.workspace-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    height: 48px;
+}
+.workspace-header button.btn-icon-text,
+.workspace-header button.btn-icon {
+    background: transparent;
+    border: none;
+    color: #a0a0a0;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+.workspace-header button:hover {
+    background: #2d2d2d;
+    color: #ffffff;
+}
+
+/* Split Pane Layout */
+.arena-split-pane {
+    display: flex;
+    flex: 1;
+    gap: 0.5rem;
+    overflow: hidden; /* Prevent scrolling outside panes */
+}
+
+/* Generic Pane Base */
+.arena-pane {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* Box shadow for depth */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+    border: 1px solid #333;
+}
+
+/* Left Pane (Description) */
+.left-pane {
+    flex: 0 0 45%; 
+    min-width: 300px;
+}
+
+/* Tabs */
+.pane-tabs {
+    display: flex;
+    gap: 0.25rem;
+    background-color: #252526;
+    padding: 0.25rem 0.5rem;
+    border-bottom: 1px solid #333;
+}
+.pane-tab {
+    background: transparent;
+    color: #8c8c8c;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 4px 4px 0 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s;
+}
+.pane-tab:hover {
+    color: #d4d4d4;
+    background: #2d2d2d;
+}
+.pane-tab.active {
+    color: #ffffff;
+    border-bottom: 2px solid #007acc;
+    background: #1e1e1e;
+}
+
+/* Scrollable Content */
+.pane-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+}
+
+/* Problem Detail Typography */
+.problem-title-header h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+.problem-meta-badges {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+.badge.diff-badge {
+    background-color: rgba(16, 185, 129, 0.15); /* Green for easy */
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.problem-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #cccccc;
+    margin-bottom: 2rem;
+}
+
+.problem-examples pre.code-block {
+    background-color: #2d2d2d;
+    padding: 1rem;
+    border-radius: 6px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: #d4d4d4;
+    border: 1px solid #3b3b3b;
+    margin-top: 0.5rem;
+}
+
+.problem-constraints {
+    margin-top: 2rem;
+}
+.problem-constraints h4 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+.constraint-list ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+.constraint-list code {
+    background-color: #2d2d2d;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: monospace;
+    color: #d4d4d4;
+}
+
+/* Right Pane (Editor) */
+.right-pane {
+    flex: 1;
+    min-width: 400px;
+}
+
+.editor-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background-color: #252526;
+    border-bottom: 1px solid #333;
+}
+.lc-select {
+    background-color: #3c3c3c;
+    color: #cccccc;
+    border: 1px solid #333;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.editor-container {
+    flex: 1;
+    position: relative;
+    background-color: #1e1e1e; /* CodeMirror will mount here */
+}
+
+/* CodeMirror overrides for Premium Dark Theme */
+.CodeMirror {
+    height: 100% !important;
+    background: #1e1e1e !important;
+    color: #d4d4d4 !important;
+    font-family: 'Consolas', 'Courier New', monospace !important;
+    font-size: 14px;
+}
+.CodeMirror-gutters {
+    background: #1e1e1e !important;
+    border-right: 1px solid #333 !important;
+}
+.CodeMirror-linenumber {
+    color: #858585 !important;
+}
+.CodeMirror-cursor {
+    border-left: 2px solid #d4d4d4 !important;
+}
+
+/* Generic token colors for dark theme simulation */
+.cm-s-default .cm-keyword { color: #569cd6; }
+.cm-s-default .cm-operator { color: #d4d4d4; }
+.cm-s-default .cm-variable { color: #9cdcfe; }
+.cm-s-default .cm-variable-2 { color: #9cdcfe; }
+.cm-s-default .cm-variable-3, .cm-s-default .cm-type { color: #4ec9b0; }
+.cm-s-default .cm-builtin { color: #4ec9b0; }
+.cm-s-default .cm-string { color: #ce9178; }
+.cm-s-default .cm-number { color: #b5cea8; }
+.cm-s-default .cm-def { color: #dcdcaa; }
+.cm-s-default .cm-comment { color: #6a9955; font-style: italic; }
+
+/* Console area */
+.arena-console {
+    background-color: #1e1e1e;
+    border-top: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    transition: height 0.3s ease;
+}
+.arena-console.collapsed {
+    height: 0;
+    border-top: none;
+    overflow: hidden;
+}
+
+.console-header-tabs {
+    display: flex;
+    justify-content: space-between;
+    background-color: #252526;
+    padding: 0 0.5rem;
+}
+.console-tab {
+    background: transparent;
+    color: #8c8c8c;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+.console-tab.active {
+    color: #ffffff;
+    border-bottom: 2px solid #007acc;
+}
+
+.console-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+.tc-box {
+    background: #2d2d2d;
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 0.9rem;
+    border: 1px solid #3b3b3b;
+    color: #d4d4d4;
+    margin-bottom: 1rem;
+}
+
+/* Action Bar */
+.arena-action-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    background-color: #1e1e1e;
+    border-top: 1px solid #333;
+}
+
+.btn-console-toggle {
+    background: #2d2d2d;
+    border: 1px solid #333;
+    color: #cccccc;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.btn-console-toggle:hover {
+    background: #3b3b3b;
+}
+
+.action-buttons-right {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.btn-run {
+    background-color: #3b3b3b;
+    border: none;
+    color: white;
+    padding: 0.4rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+.btn-run:hover {
+    background-color: #4a4a4a;
+}
+
+.btn-submit {
+    background-color: #10b981; /* Teal green from screenshot */
+    border: none;
+    color: white;
+    padding: 0.4rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+.btn-submit:hover {
+    background-color: #059669;
+}

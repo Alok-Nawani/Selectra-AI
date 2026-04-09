@@ -1,0 +1,12 @@
+{
+    "questions": [
+        "Tell me about a challenging project you worked on recently.",
+        "How do you handle merge conflicts in Git?",
+        "Explain the difference between TCP and UDP.",
+        "What is the time complexity of QuickSort in the worst case?",
+        "Describe a situation where you had to learn a new technology quickly.",
+        "What approach do you take when debugging a complex issue?",
+        "How do you prioritize tasks when under a tight deadline?",
+        "Explain the concept of RESTful API design."
+    ]
+}

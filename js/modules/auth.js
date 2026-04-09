@@ -1,34 +1,42 @@
-export function login(name, email) {
-    if (!name || !email) return;
+const API_URL = 'http://localhost:5001/api/auth';
+const API_USER_URL = 'http://localhost:5001/api/user/progress';
 
-    const cleanEmail = email.trim().toLowerCase();
-    const user = {
-        name: name.trim(),
-        email: cleanEmail,
-        joinedAt: new Date().toISOString()
-    };
+export async function register(name, email, password) {
+    const res = await fetch(`${API_URL}/register`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, password })
+    });
+    const data = await res.json();
+    if (!data.success) throw new Error(data.message);
+    
+    localStorage.setItem('authToken', data.token);
+    localStorage.setItem('currentUser', JSON.stringify(data.user));
+    
+    initLocalProgress(data.user);
+    return data.user;
+}
 
-    // Store current user session
-    localStorage.setItem('currentUser', JSON.stringify(user));
+export async function login(email, password) {
+    const res = await fetch(`${API_URL}/login`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password })
+    });
+    const data = await res.json();
+    if (!data.success) throw new Error(data.message);
 
-    const userKey = `progress_${cleanEmail}`;
-    if (!localStorage.getItem(userKey)) {
-        const initialProgress = {
-            interviews: [],
-            totalScore: 0,
-            modulesCompleted: 0,
-            level: 1,
-            xp: 0,
-            streak: 0,
-            lastActivity: new Date().toISOString(),
-            courseProgress: {} // { moduleId: videoIndex }
-        };
-        localStorage.setItem(userKey, JSON.stringify(initialProgress));
-    }
+    localStorage.setItem('authToken', data.token);
+    localStorage.setItem('currentUser', JSON.stringify(data.user));
+    
+    initLocalProgress(data.user);
+    return data.user;
 }
 
 export function logout() {
     localStorage.removeItem('currentUser');
+    localStorage.removeItem('authToken');
+    localStorage.removeItem('userProgress');
     window.location.href = 'login.html';
 }
 
@@ -37,13 +45,62 @@ export function getCurrentUser() {
     return user ? JSON.parse(user) : null;
 }
 
-export function ensureAuth() {
-    const user = getCurrentUser();
-    if (!user) {
+export async function ensureAuth() {
+    let user = getCurrentUser();
+    const token = localStorage.getItem('authToken');
+    
+    if (!user || !token) {
         window.location.href = 'login.html';
         return null;
     }
+
+    try {
+        const res = await fetch(API_USER_URL, {
+            headers: { 'Authorization': `Bearer ${token}` }
+        });
+        if (res.status === 401) {
+            logout();
+            return null;
+        }
+        const data = await res.json();
+        if (data.success) {
+            user = data.user;
+            localStorage.setItem('currentUser', JSON.stringify(user));
+            initLocalProgress(user);
+        }
+    } catch (e) {
+        console.error("Failed to sync progress on load, using local cache.", e);
+    }
+
     return user;
+}
+
+function initLocalProgress(user) {
+    const userKey = `progress_${user.email.trim().toLowerCase()}`;
+    // Always sync the server state to local on load
+    const initialProgress = {
+        interviews: [],
+        totalScore: Math.floor(user.progress ? (user.progress.dsa + user.progress.dbms + user.progress.os) : 0),
+        modulesCompleted: user.completedTopics ? user.completedTopics.length : 0,
+        level: 1,
+        xp: user.xp || 0,
+        streak: user.streak || 1,
+        lastActivity: new Date().toISOString(),
+        courseProgress: {
+            dsa: user.progress ? Math.floor(user.progress.dsa / 10) : 0, // Mock 10 points per completion 
+            dbms: user.progress ? Math.floor(user.progress.dbms / 10) : 0,
+            os: user.progress ? Math.floor(user.progress.os / 10) : 0
+        }
+    };
+    
+    // Preserve interviews if exists
+    const existingStr = localStorage.getItem(userKey);
+    if (existingStr) {
+        const existing = JSON.parse(existingStr);
+        initialProgress.interviews = existing.interviews || [];
+    }
+    
+    localStorage.setItem(userKey, JSON.stringify(initialProgress));
 }
 
 export function getProgress() {
@@ -52,15 +109,7 @@ export function getProgress() {
 
     const userKey = `progress_${user.email.trim().toLowerCase()}`;
     const data = localStorage.getItem(userKey);
-    return data ? JSON.parse(data) : {
-        interviews: [],
-        totalScore: 0,
-        modulesCompleted: 0,
-        level: 1,
-        xp: 0,
-        streak: 0,
-        lastActivity: null
-    };
+    return data ? JSON.parse(data) : null;
 }
 
 export function saveProgress(newData) {
@@ -70,21 +119,37 @@ export function saveProgress(newData) {
     const userKey = `progress_${user.email.trim().toLowerCase()}`;
     const current = getProgress();
 
-    // Merge logic
     const updated = { ...current, ...newData };
 
-    // Auto-level up logic (mock)
     if (updated.xp > updated.level * 1000) {
         updated.level++;
-        updated.xp = updated.xp - (updated.level * 1000); // Carry over remainder? Simplified reset for now
+        updated.xp = updated.xp - (updated.level * 1000); 
     }
 
     localStorage.setItem(userKey, JSON.stringify(updated));
+    
+    const token = localStorage.getItem('authToken');
+    if (token && updated.courseProgress) {
+        fetch(API_USER_URL, {
+            method: 'PUT',
+            headers: { 
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify({
+                dsa: updated.courseProgress.dsa ? updated.courseProgress.dsa * 10 : 0,
+                dbms: updated.courseProgress.dbms ? updated.courseProgress.dbms * 10 : 0,
+                os: updated.courseProgress.os ? updated.courseProgress.os * 10 : 0
+            })
+        }).catch(err => console.error("Cloud sync failed", err));
+    }
+
     return updated;
 }
 
 export function addInterviewResult(result) {
     const progress = getProgress();
+    progress.interviews = progress.interviews || [];
     progress.interviews.push({
         date: new Date().toISOString(),
         score: result.score,
@@ -92,10 +157,9 @@ export function addInterviewResult(result) {
         type: result.type
     });
 
-    // Update aggregate stats
     progress.totalScore += result.score;
-    progress.xp += 500; // XP per interview
-    progress.modulesCompleted++; // Counting interview as module for now
+    progress.xp += 500; 
+    progress.modulesCompleted++; 
 
     saveProgress(progress);
 }

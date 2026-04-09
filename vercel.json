@@ -1,14 +1,22 @@
 {
-    "cleanUrls": true,
-    "trailingSlash": false,
-    "rewrites": [
-        {
-            "source": "/login",
-            "destination": "/login.html"
-        },
-        {
-            "source": "/app",
-            "destination": "/app.html"
-        }
-    ]
+  "version": 2,
+  "name": "selectra-ai",
+  "builds": [
+    { "src": "package.json", "use": "@vercel/node" },
+    { "src": "api/index.js", "use": "@vercel/node" },
+    { "src": "**/*.html", "use": "@vercel/static" },
+    { "src": "css/**/*.css", "use": "@vercel/static" },
+    { "src": "js/**/*.js", "use": "@vercel/static" },
+    { "src": "data/**/*.json", "use": "@vercel/static" },
+    { "src": "sounds/**/*", "use": "@vercel/static" },
+    { "src": "assets/**/*", "use": "@vercel/static" }
+  ],
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/index.js" },
+    { "source": "/login", "destination": "/login.html" },
+    { "source": "/dashboard", "destination": "/app.html" }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
 }

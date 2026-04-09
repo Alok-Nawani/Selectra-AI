@@ -126,35 +126,91 @@
             <i class="fa-solid fa-brain"></i> Selectra AI
         </div>
 
+        <!-- Login Form -->
         <form id="login-form">
             <div class="input-group">
-                <label for="username">Student Name</label>
-                <input type="text" id="username" placeholder="Enter your name" required>
+                <label for="login-email">Email</label>
+                <input type="email" id="login-email" placeholder="student@example.com" required>
             </div>
-
             <div class="input-group">
-                <label for="email">Student ID (Email)</label>
-                <input type="email" id="email" placeholder="student@example.com" required>
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" placeholder="Enter password" required>
             </div>
-
-            <button type="submit">Start Learning</button>
+            <p id="login-error" style="color: #ef4444; font-size: 0.85rem; margin-bottom: 1rem; display: none;"></p>
+            <button type="submit">Log In</button>
+            <div class="divider"></div>
+            <p class="footer-text">Don't have an account? <a href="#" id="show-signup" style="color: var(--accent-cyan); text-decoration: none;">Sign Up</a></p>
         </form>
 
-        <div class="divider"></div>
-        <p class="footer-text">Progress is saved locally for this device.</p>
+        <!-- Signup Form (Hidden initially) -->
+        <form id="signup-form" style="display: none;">
+            <div class="input-group">
+                <label for="signup-name">Full Name</label>
+                <input type="text" id="signup-name" placeholder="Enter your name" required>
+            </div>
+            <div class="input-group">
+                <label for="signup-email">Email</label>
+                <input type="email" id="signup-email" placeholder="student@example.com" required>
+            </div>
+            <div class="input-group">
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" placeholder="Create password" required>
+            </div>
+            <p id="signup-error" style="color: #ef4444; font-size: 0.85rem; margin-bottom: 1rem; display: none;"></p>
+            <button type="submit">Create Account</button>
+            <div class="divider"></div>
+            <p class="footer-text">Already have an account? <a href="#" id="show-login" style="color: var(--accent-cyan); text-decoration: none;">Log In</a></p>
+        </form>
     </div>
 
     <script type="module">
-        import { login } from './js/modules/auth.js';
+        import { login, register } from './js/modules/auth.js';
 
-        document.getElementById('login-form').addEventListener('submit', (e) => {
+        const loginForm = document.getElementById('login-form');
+        const signupForm = document.getElementById('signup-form');
+
+        document.getElementById('show-signup').addEventListener('click', (e) => {
             e.preventDefault();
-            const name = document.getElementById('username').value;
-            const email = document.getElementById('email').value;
+            loginForm.style.display = 'none';
+            signupForm.style.display = 'block';
+        });
 
-            if (name && email) {
-                login(name, email);
+        document.getElementById('show-login').addEventListener('click', (e) => {
+            e.preventDefault();
+            signupForm.style.display = 'none';
+            loginForm.style.display = 'block';
+        });
+
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+            const errElem = document.getElementById('login-error');
+            
+            errElem.style.display = 'none';
+            try {
+                await login(email, password);
                 window.location.href = 'app.html';
+            } catch (err) {
+                errElem.textContent = err.message;
+                errElem.style.display = 'block';
+            }
+        });
+
+        signupForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const name = document.getElementById('signup-name').value;
+            const email = document.getElementById('signup-email').value;
+            const password = document.getElementById('signup-password').value;
+            const errElem = document.getElementById('signup-error');
+
+            errElem.style.display = 'none';
+            try {
+                await register(name, email, password);
+                window.location.href = 'app.html';
+            } catch (err) {
+                errElem.textContent = err.message;
+                errElem.style.display = 'block';
             }
         });
     </script>
