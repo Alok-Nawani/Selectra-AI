@@ -8,9 +8,17 @@ const CONFIG = {
     HF_MODEL: "mistralai/Mistral-7B-Instruct-v0.2",
     DEEPGRAM_URL: "wss://api.deepgram.com/v1/listen?smart_format=true&model=nova-2&language=en-US",
 
-    API_URL: window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-        ? 'http://localhost:3000'
-        : '',
+    API_URL: (() => {
+        const h = window.location.hostname;
+        const p = window.location.port;
+        // If we are on Vercel/Production
+        if (!h.includes('localhost') && !h.includes('127.0.0.1') && !/^\d+\.\d+\.\d+\.\d+$/.test(h)) {
+            return ''; 
+        }
+        // If we are on Localhost or Local IP (Mobile testing)
+        // Ensure we point to port 3000 where the backend is running
+        return `${window.location.protocol}//${h}:3000`;
+    })(),
 
     // Function to load keys from backend
     async loadRemoteConfig() {

@@ -4,37 +4,47 @@ export function initNavigation() {
     const navLinks = document.querySelectorAll('.nav-links a');
     const sections = document.querySelectorAll('main section');
 
-    // Handle Navigation Clicks
-    navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            const href = link.getAttribute('href');
-            if (!href.startsWith('#')) return; // Allow normal navigation for external links
+    // Handle All Internal Hash Navigation
+    document.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        if (!link) return;
 
+        const href = link.getAttribute('href');
+        if (!href || !href.startsWith('#')) return;
+
+        // Custom sections handling
+        const targetId = href.substring(1);
+        const targetSection = document.getElementById(targetId);
+        
+        if (targetSection) {
             e.preventDefault();
-            const targetId = href.substring(1);
 
             // Hide all sections
-            sections.forEach(section => {
-                section.classList.add('hidden');
-            });
-
+            sections.forEach(s => s.classList.add('hidden'));
+            
             // Show target section
-            const targetSection = document.getElementById(targetId);
-            if (targetSection) {
-                targetSection.classList.remove('hidden');
-            }
+            targetSection.classList.remove('hidden');
 
-            // Update active state
-            navLinks.forEach(l => l.parentElement.classList.remove('active'));
-            link.parentElement.classList.add('active');
+            // Update Sidebar Active State
+            navLinks.forEach(l => {
+                const lHref = l.getAttribute('href');
+                if (lHref === href) {
+                    l.parentElement.classList.add('active');
+                } else {
+                    l.parentElement.classList.remove('active');
+                }
+            });
 
             // Close Sidebar on Mobile
             const sidebar = document.querySelector('.sidebar');
             if (sidebar) sidebar.classList.remove('open');
 
-            // Dispatch event for other modules (like Arena refresh)
+            // Dispatch event for other modules
             window.dispatchEvent(new CustomEvent('section-changed', { detail: { targetId } }));
-        });
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     });
 
     // Mobile Toggle
