@@ -30,6 +30,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     initNavigation();
+    
+    // Set Initial Theme Context
+    const firstActiveSection = document.querySelector('main section:not(.hidden)');
+    if (firstActiveSection) document.body.dataset.page = firstActiveSection.id;
     initDashboard();
     initLearning();
     initInterview();

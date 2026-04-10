@@ -25,6 +25,9 @@ export function initNavigation() {
             // Show target section
             targetSection.classList.remove('hidden');
 
+            // Update Body Context for Dynamic Themes
+            document.body.dataset.page = targetId;
+
             // Update Sidebar Active State
             navLinks.forEach(l => {
                 const lHref = l.getAttribute('href');
