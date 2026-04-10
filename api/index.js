@@ -565,7 +565,8 @@ app.post('/api/auth/login', async (req, res) => {
         const token = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: '7d' });
         res.json({ success: true, token, user: { name: user.name, email: user.email, _id: user._id, progress: user.progress } });
     } catch (err) {
-        res.status(500).json({ success: false, message: 'Server error' });
+        console.error("Login Error:", err);
+        res.status(500).json({ success: false, message: 'Server error: ' + err.message });
     }
 });
 
