@@ -1,0 +1,4862 @@
+[
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Which data structure follows LIFO?",
+    "options": [
+      "Queue",
+      "Stack",
+      "Linked List",
+      "Tree"
+    ],
+    "answer": "Stack"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Binary search requires?",
+    "options": [
+      "Unsorted array",
+      "Sorted array",
+      "Stack",
+      "Queue"
+    ],
+    "answer": "Sorted array"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Time complexity of merge sort?",
+    "options": [
+      "O(n)",
+      "O(n^2)",
+      "O(n log n)",
+      "O(1)"
+    ],
+    "answer": "O(n log n)"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Queue deletion happens at?",
+    "options": [
+      "Rear",
+      "Front",
+      "Middle",
+      "Anywhere"
+    ],
+    "answer": "Front"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Heap is used for?",
+    "options": [
+      "Stack",
+      "Queue",
+      "Priority Queue",
+      "Linked List"
+    ],
+    "answer": "Priority Queue"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "DFS uses which data structure?",
+    "options": [
+      "Queue",
+      "Stack",
+      "Array",
+      "Linked List"
+    ],
+    "answer": "Stack"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "BFS uses which data structure?",
+    "options": [
+      "Stack",
+      "Queue",
+      "Tree",
+      "Graph"
+    ],
+    "answer": "Queue"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Worst-case BST search complexity?",
+    "options": [
+      "O(log n)",
+      "O(n)",
+      "O(1)",
+      "O(n log n)"
+    ],
+    "answer": "O(n)"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Balanced BST height?",
+    "options": [
+      "O(n)",
+      "O(log n)",
+      "O(1)",
+      "O(n^2)"
+    ],
+    "answer": "O(log n)"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Graph cycle detection uses?",
+    "options": [
+      "BFS",
+      "DFS",
+      "Dijkstra",
+      "Prim"
+    ],
+    "answer": "DFS"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Array access time complexity?",
+    "options": [
+      "O(n)",
+      "O(log n)",
+      "O(1)",
+      "O(n^2)"
+    ],
+    "answer": "O(1)"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Advantage of linked list insertion?",
+    "options": [
+      "Fast access",
+      "No shifting needed",
+      "Binary search",
+      "Less memory"
+    ],
+    "answer": "No shifting needed"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Tree with N nodes has how many edges?",
+    "options": [
+      "N",
+      "N+1",
+      "N-1",
+      "N/2"
+    ],
+    "answer": "N-1"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Hash table average search time?",
+    "options": [
+      "O(n)",
+      "O(log n)",
+      "O(1)",
+      "O(n^2)"
+    ],
+    "answer": "O(1)"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "AVL tree is a?",
+    "options": [
+      "Binary Tree",
+      "Self-balancing BST",
+      "Heap",
+      "Graph"
+    ],
+    "answer": "Self-balancing BST"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Topological sort applies to?",
+    "options": [
+      "Undirected Graph",
+      "Cyclic Graph",
+      "DAG",
+      "Tree"
+    ],
+    "answer": "DAG"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Stack overflow occurs when?",
+    "options": [
+      "Stack is empty",
+      "Memory is full",
+      "Queue is full",
+      "Heap is full"
+    ],
+    "answer": "Memory is full"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Circular queue solves which problem?",
+    "options": [
+      "Slow access",
+      "Wasted space",
+      "Complexity",
+      "Recursion"
+    ],
+    "answer": "Wasted space"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Algorithm for Minimal Spanning Tree?",
+    "options": [
+      "Dijkstra",
+      "Prim/Kruskal",
+      "BFS",
+      "DFS"
+    ],
+    "answer": "Prim/Kruskal"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Adjacency list is best for?",
+    "options": [
+      "Dense graphs",
+      "Sparse graphs",
+      "Trees",
+      "Arrays"
+    ],
+    "answer": "Sparse graphs"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "What is a full binary tree?",
+    "options": [
+      "Every node has 1 child",
+      "Every node has 0 or 2 children",
+      "Every node has 2 children",
+      "Leaf nodes are at same level"
+    ],
+    "answer": "Every node has 0 or 2 children"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Which traversal visits root first?",
+    "options": [
+      "Inorder",
+      "Postorder",
+      "Preorder",
+      "Level order"
+    ],
+    "answer": "Preorder"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Searching in balanced BST takes?",
+    "options": [
+      "O(n)",
+      "O(log n)",
+      "O(1)",
+      "O(n^2)"
+    ],
+    "answer": "O(log n)"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Which DS is used in recursion internally?",
+    "options": [
+      "Queue",
+      "Stack",
+      "Tree",
+      "Graph"
+    ],
+    "answer": "Stack"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "A graph with V vertices has max edges?",
+    "options": [
+      "V",
+      "V^2",
+      "V(V-1)/2",
+      "V-1"
+    ],
+    "answer": "V(V-1)/2"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "What is collision in hashing?",
+    "options": [
+      "Data loss",
+      "Same index for two keys",
+      "Table full",
+      "Invalid key"
+    ],
+    "answer": "Same index for two keys"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Which algorithm sorts by repeatedly selecting minimum?",
+    "options": [
+      "Bubble sort",
+      "Insertion sort",
+      "Selection sort",
+      "Merge sort"
+    ],
+    "answer": "Selection sort"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Time complexity of insertion sort worst case?",
+    "options": [
+      "O(n)",
+      "O(n log n)",
+      "O(n^2)",
+      "O(1)"
+    ],
+    "answer": "O(n^2)"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Leaf node means?",
+    "options": [
+      "Root node",
+      "Node with 1 child",
+      "Node with no children",
+      "Node with 2 children"
+    ],
+    "answer": "Node with no children"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Directed graph edges have?",
+    "options": [
+      "Weights",
+      "Capacity",
+      "Direction",
+      "Colors"
+    ],
+    "answer": "Direction"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Which DS supports dynamic memory best?",
+    "options": [
+      "Array",
+      "Linked List",
+      "Stack",
+      "Queue"
+    ],
+    "answer": "Linked List"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Heap always satisfies?",
+    "options": [
+      "BST property",
+      "Heap property",
+      "FIFO",
+      "LIFO"
+    ],
+    "answer": "Heap property"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Queue implemented using arrays suffers from?",
+    "options": [
+      "Underflow",
+      "Overflow",
+      "Complexity",
+      "Speed"
+    ],
+    "answer": "Overflow"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Binary tree height impacts?",
+    "options": [
+      "Insertion",
+      "Deletion",
+      "Search time",
+      "Memory"
+    ],
+    "answer": "Search time"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Merge sort is based on?",
+    "options": [
+      "Greedy",
+      "Dynamic Programming",
+      "Divide & Conquer",
+      "Backtracking"
+    ],
+    "answer": "Divide & Conquer"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Graph stored using matrix uses?",
+    "options": [
+      "Less space",
+      "More space",
+      "Less time",
+      "More time"
+    ],
+    "answer": "More space"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Stack supports which operations?",
+    "options": [
+      "Enqueue/Dequeue",
+      "Push/Pop",
+      "Insert/Delete",
+      "Add/Remove"
+    ],
+    "answer": "Push/Pop"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Circular linked list last node points to?",
+    "options": [
+      "Null",
+      "Second node",
+      "First node",
+      "Middle node"
+    ],
+    "answer": "First node"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Which algorithm finds MST?",
+    "options": [
+      "BFS",
+      "DFS",
+      "Kruskal",
+      "Bellman-Ford"
+    ],
+    "answer": "Kruskal"
+  },
+  {
+    "subject": "DSA",
+    "topic": "DSA",
+    "question": "Binary search divides array into?",
+    "options": [
+      "Three parts",
+      "Two halves",
+      "Four parts",
+      "Random parts"
+    ],
+    "answer": "Two halves"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "OS manages?",
+    "options": [
+      "Hardware & processes",
+      "Internet",
+      "Applications only",
+      "Users only"
+    ],
+    "answer": "Hardware & processes"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "A Process is?",
+    "options": [
+      "Static code",
+      "Program in execution",
+      "A thread",
+      "A core"
+    ],
+    "answer": "Program in execution"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "A Thread is?",
+    "options": [
+      "Heavy process",
+      "Lightweight process",
+      "System call",
+      "Interrupt"
+    ],
+    "answer": "Lightweight process"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "Context switching means?",
+    "options": [
+      "User switching",
+      "CPU switching tasks",
+      "Disk switching",
+      "Memory switching"
+    ],
+    "answer": "CPU switching tasks"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "Deadlock requires?",
+    "options": [
+      "Preemption",
+      "Mutual exclusion",
+      "Throughput",
+      "Latency"
+    ],
+    "answer": "Mutual exclusion"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "Paging avoids?",
+    "options": [
+      "Internal fragmentation",
+      "External fragmentation",
+      "Thrashing",
+      "Swapping"
+    ],
+    "answer": "External fragmentation"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "Virtual memory uses?",
+    "options": [
+      "RAM",
+      "Cache",
+      "Disk space",
+      "Registers"
+    ],
+    "answer": "Disk space"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "Kernel is?",
+    "options": [
+      "User interface",
+      "Core of OS",
+      "Application",
+      "Driver"
+    ],
+    "answer": "Core of OS"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "Scheduler decides?",
+    "options": [
+      "Memory allocation",
+      "Next process",
+      "Disk layout",
+      "Network route"
+    ],
+    "answer": "Next process"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "Multithreading improves?",
+    "options": [
+      "Security",
+      "Responsiveness",
+      "Storage",
+      "Complexity"
+    ],
+    "answer": "Responsiveness"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "Semaphore is used for?",
+    "options": [
+      "Paging",
+      "Synchronization",
+      "Scheduling",
+      "Booting"
+    ],
+    "answer": "Synchronization"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "PCB stores?",
+    "options": [
+      "File data",
+      "Process info",
+      "Memory map",
+      "User data"
+    ],
+    "answer": "Process info"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "Thrashing occurs due to?",
+    "options": [
+      "High CPU load",
+      "Excess paging",
+      "Deadlock",
+      "Interrupts"
+    ],
+    "answer": "Excess paging"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "System call connects?",
+    "options": [
+      "User & Kernel",
+      "CPU & RAM",
+      "Web & Server",
+      "App & DB"
+    ],
+    "answer": "User & Kernel"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "Ready queue stores?",
+    "options": [
+      "Blocked processes",
+      "Waiting processes",
+      "Running processes",
+      "Terminated processes"
+    ],
+    "answer": "Waiting processes"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "Swapping moves process between?",
+    "options": [
+      "CPU & Cache",
+      "RAM & Disk",
+      "Disk & Network",
+      "Core & Thread"
+    ],
+    "answer": "RAM & Disk"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "Interrupt signals?",
+    "options": [
+      "User request",
+      "CPU event",
+      "Memory error",
+      "Disk full"
+    ],
+    "answer": "CPU event"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "File system manages?",
+    "options": [
+      "Networking",
+      "Storage",
+      "Processing",
+      "Display"
+    ],
+    "answer": "Storage"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "Time sharing improves?",
+    "options": [
+      "Security",
+      "CPU utilization",
+      "Storage",
+      "Boot time"
+    ],
+    "answer": "CPU utilization"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "OS abstraction hides?",
+    "options": [
+      "Software errors",
+      "Hardware complexity",
+      "Network speed",
+      "User data"
+    ],
+    "answer": "Hardware complexity"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "CPU executes instructions from?",
+    "options": [
+      "Disk",
+      "Memory (RAM)",
+      "Network",
+      "Cache Only"
+    ],
+    "answer": "Memory (RAM)"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "Process state includes?",
+    "options": [
+      "Open/Closed",
+      "Ready/Running",
+      "Active/Inactive",
+      "Up/Down"
+    ],
+    "answer": "Ready/Running"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "Scheduler improves?",
+    "options": [
+      "Graphics",
+      "Efficiency",
+      "Storage",
+      "Sound"
+    ],
+    "answer": "Efficiency"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "Paging divides memory into?",
+    "options": [
+      "Segments",
+      "Pages",
+      "Blocks",
+      "Files"
+    ],
+    "answer": "Pages"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "Deadlock prevention avoids?",
+    "options": [
+      "Wait",
+      "Circular wait",
+      "Hold",
+      "Release"
+    ],
+    "answer": "Circular wait"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "OS handles IO via?",
+    "options": [
+      "Applications",
+      "Drivers",
+      "Users",
+      "Web"
+    ],
+    "answer": "Drivers"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "Multitasking allows?",
+    "options": [
+      "Single program",
+      "Multiple programs",
+      "No programs",
+      "One thread"
+    ],
+    "answer": "Multiple programs"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "System call requests?",
+    "options": [
+      "User permission",
+      "OS service",
+      "Network access",
+      "Hardware info"
+    ],
+    "answer": "OS service"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "Kernel mode allows?",
+    "options": [
+      "Restricted access",
+      "Full hardware access",
+      "User access",
+      "Network access"
+    ],
+    "answer": "Full hardware access"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "Cache uses?",
+    "options": [
+      "High speed memory",
+      "Disk space",
+      "Tape drive",
+      "Cloud"
+    ],
+    "answer": "High speed memory"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "Time quantum used in?",
+    "options": [
+      "FCFS",
+      "SJF",
+      "Round Robin",
+      "Priority Scheduling"
+    ],
+    "answer": "Round Robin"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "Interrupt handled by?",
+    "options": [
+      "User",
+      "CPU",
+      "Disk",
+      "Network"
+    ],
+    "answer": "CPU"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "OS protects memory using?",
+    "options": [
+      "Encryption",
+      "Isolation",
+      "Compression",
+      "Defragmentation"
+    ],
+    "answer": "Isolation"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "Swap space located on?",
+    "options": [
+      "RAM",
+      "Disk",
+      "Cache",
+      "Register"
+    ],
+    "answer": "Disk"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "Resource allocation managed by?",
+    "options": [
+      "User",
+      "OS",
+      "Application",
+      "BIOS"
+    ],
+    "answer": "OS"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "File system organizes?",
+    "options": [
+      "Processes",
+      "Files",
+      "Networking",
+      "Memory"
+    ],
+    "answer": "Files"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "Threads share?",
+    "options": [
+      "Nothing",
+      "Memory space",
+      "CPU registers",
+      "Stack"
+    ],
+    "answer": "Memory space"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "Process owns?",
+    "options": [
+      "Address space",
+      "CPU",
+      "Disk",
+      "Network"
+    ],
+    "answer": "Address space"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "OS ensures?",
+    "options": [
+      "Profit",
+      "Security",
+      "Good UI",
+      "Marketing"
+    ],
+    "answer": "Security"
+  },
+  {
+    "subject": "OS",
+    "topic": "OS",
+    "question": "Scheduling algorithm example?",
+    "options": [
+      "Quick Sort",
+      "FCFS",
+      "Binary Search",
+      "DFS"
+    ],
+    "answer": "FCFS"
+  },
+  {
+    "subject": "AI",
+    "topic": "AI",
+    "question": "AI stands for?",
+    "options": [
+      "Artificial Intelligence",
+      "Automated Intelligence",
+      "Advanced Intelligence",
+      "Active Interference"
+    ],
+    "answer": "Artificial Intelligence"
+  },
+  {
+    "subject": "AI",
+    "topic": "AI",
+    "question": "Goal of AI?",
+    "options": [
+      "Speed up hardware",
+      "Simulate human intelligence",
+      "Store data",
+      "Create websites"
+    ],
+    "answer": "Simulate human intelligence"
+  },
+  {
+    "subject": "AI",
+    "topic": "AI",
+    "question": "AI is used in?",
+    "options": [
+      "Word processing",
+      "Automation",
+      "Manual labor",
+      "Basic calculation"
+    ],
+    "answer": "Automation"
+  },
+  {
+    "subject": "AI",
+    "topic": "AI",
+    "question": "Expert system mimics?",
+    "options": [
+      "Child",
+      "Human decision-making",
+      "Robot",
+      "Database"
+    ],
+    "answer": "Human decision-making"
+  },
+  {
+    "subject": "AI",
+    "topic": "AI",
+    "question": "NLP stands for?",
+    "options": [
+      "Natural Language Processing",
+      "Neural Language Program",
+      "New Learning Process",
+      "Native Logic Protocol"
+    ],
+    "answer": "Natural Language Processing"
+  },
+  {
+    "subject": "AI",
+    "topic": "AI",
+    "question": "Computer vision deals with?",
+    "options": [
+      "Sound",
+      "Text",
+      "Images/Video",
+      "Numbers"
+    ],
+    "answer": "Images/Video"
+  },
+  {
+    "subject": "AI",
+    "topic": "AI",
+    "question": "AI requires?",
+    "options": [
+      "Only code",
+      "Data + Algorithms",
+      "Only hardware",
+      "Internet only"
+    ],
+    "answer": "Data + Algorithms"
+  },
+  {
+    "subject": "AI",
+    "topic": "AI",
+    "question": "Chatbots use which technology?",
+    "options": [
+      "Database",
+      "NLP",
+      "Operating System",
+      "Networking"
+    ],
+    "answer": "NLP"
+  },
+  {
+    "subject": "AI",
+    "topic": "AI",
+    "question": "AI decision-making is based on?",
+    "options": [
+      "Randomness",
+      "Patterns/Logic",
+      "Luck",
+      "Time"
+    ],
+    "answer": "Patterns/Logic"
+  },
+  {
+    "subject": "AI",
+    "topic": "AI",
+    "question": "Robotics uses AI for?",
+    "options": [
+      "Strength",
+      "Automation/Reasoning",
+      "Speed",
+      "Design"
+    ],
+    "answer": "Automation/Reasoning"
+  },
+  {
+    "subject": "AI",
+    "topic": "AI",
+    "question": "Knowledge representation is used in?",
+    "options": [
+      "Gaming",
+      "Reasoning",
+      "Sorting",
+      "Searching"
+    ],
+    "answer": "Reasoning"
+  },
+  {
+    "subject": "AI",
+    "topic": "AI",
+    "question": "AI learning improves via?",
+    "options": [
+      "Time",
+      "Experience/Data",
+      "Coding",
+      "Hardware"
+    ],
+    "answer": "Experience/Data"
+  },
+  {
+    "subject": "AI",
+    "topic": "AI",
+    "question": "Search algorithms are used in?",
+    "options": [
+      "Problem solving",
+      "Data entry",
+      "Graphics",
+      "Networking"
+    ],
+    "answer": "Problem solving"
+  },
+  {
+    "subject": "AI",
+    "topic": "AI",
+    "question": "AI models are trained using?",
+    "options": [
+      "Textbooks",
+      "Datasets",
+      "Manual input",
+      "Guesswork"
+    ],
+    "answer": "Datasets"
+  },
+  {
+    "subject": "AI",
+    "topic": "AI",
+    "question": "Ethics in AI ensures?",
+    "options": [
+      "Profit",
+      "Responsible usage",
+      "Speed",
+      "Control"
+    ],
+    "answer": "Responsible usage"
+  },
+  {
+    "subject": "AI",
+    "topic": "AI",
+    "question": "Recommendation systems use?",
+    "options": [
+      "AI/ML",
+      "SQL",
+      "Networking",
+      "Hardware"
+    ],
+    "answer": "AI/ML"
+  },
+  {
+    "subject": "AI",
+    "topic": "AI",
+    "question": "AI in healthcare helps with?",
+    "options": [
+      "Surgery only",
+      "Diagnosis/Predictions",
+      "Billing",
+      "Staffing"
+    ],
+    "answer": "Diagnosis/Predictions"
+  },
+  {
+    "subject": "AI",
+    "topic": "AI",
+    "question": "Autonomous vehicles rely on?",
+    "options": [
+      "GPS only",
+      "AI Perception",
+      "Driver",
+      "Maps only"
+    ],
+    "answer": "AI Perception"
+  },
+  {
+    "subject": "AI",
+    "topic": "AI",
+    "question": "AI improves productivity by?",
+    "options": [
+      "Adding work",
+      "Automation",
+      "Complicating tasks",
+      "Slowing down"
+    ],
+    "answer": "Automation"
+  },
+  {
+    "subject": "AI",
+    "topic": "AI",
+    "question": "AI works using?",
+    "options": [
+      "Magic",
+      "Data-driven models",
+      "Simple rules",
+      "Human intervention"
+    ],
+    "answer": "Data-driven models"
+  },
+  {
+    "subject": "AI",
+    "topic": "AI",
+    "question": "AI enables machines to?",
+    "options": [
+      "Think/Decide",
+      "Sleep",
+      "Eat",
+      "Feel"
+    ],
+    "answer": "Think/Decide"
+  },
+  {
+    "subject": "AI",
+    "topic": "AI",
+    "question": "Vision AI deals with?",
+    "options": [
+      "Audio",
+      "Images",
+      "Text",
+      "Touch"
+    ],
+    "answer": "Images"
+  },
+  {
+    "subject": "AI",
+    "topic": "AI",
+    "question": "AI improves via?",
+    "options": [
+      "Age",
+      "Training/Data",
+      "Rest",
+      "Design"
+    ],
+    "answer": "Training/Data"
+  },
+  {
+    "subject": "AI",
+    "topic": "AI",
+    "question": "AI predictions are based on?",
+    "options": [
+      "Guess",
+      "Patterns",
+      "Luck",
+      "Stars"
+    ],
+    "answer": "Patterns"
+  },
+  {
+    "subject": "AI",
+    "topic": "AI",
+    "question": "AI in banking helps with?",
+    "options": [
+      "Counting cash",
+      "Fraud detection",
+      "Printing",
+      "Cleaning"
+    ],
+    "answer": "Fraud detection"
+  },
+  {
+    "subject": "AI",
+    "topic": "AI",
+    "question": "Automation reduces?",
+    "options": [
+      "Efficiency",
+      "Human effort",
+      "Quality",
+      "Speed"
+    ],
+    "answer": "Human effort"
+  },
+  {
+    "subject": "AI",
+    "topic": "AI",
+    "question": "Self-driving cars use?",
+    "options": [
+      "Manual control",
+      "AI",
+      "Remote control",
+      "Tracks"
+    ],
+    "answer": "AI"
+  },
+  {
+    "subject": "AI",
+    "topic": "AI",
+    "question": "AI solves?",
+    "options": [
+      "Simple math",
+      "Complex tasks",
+      "Nothing",
+      "Everything"
+    ],
+    "answer": "Complex tasks"
+  },
+  {
+    "subject": "AI",
+    "topic": "AI",
+    "question": "AI output improves with?",
+    "options": [
+      "Less data",
+      "More quality data",
+      "Time",
+      "Hardware"
+    ],
+    "answer": "More quality data"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "OOP stands for?",
+    "options": [
+      "Object Oriented Protocol",
+      "Object Oriented Programming",
+      "Object Oriented Process",
+      "Object Open Protocol"
+    ],
+    "answer": "Object Oriented Programming"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "Class is?",
+    "options": [
+      "Variable",
+      "Function",
+      "Blueprint",
+      "Object"
+    ],
+    "answer": "Blueprint"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "Object is?",
+    "options": [
+      "Prototype",
+      "Instance of a class",
+      "Function",
+      "Variable"
+    ],
+    "answer": "Instance of a class"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "Encapsulation means?",
+    "options": [
+      "Data sharing",
+      "Data hiding",
+      "Inheritance",
+      "Polymorphism"
+    ],
+    "answer": "Data hiding"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "Inheritance provides?",
+    "options": [
+      "Complexity",
+      "Reusability",
+      "Security",
+      "Speed"
+    ],
+    "answer": "Reusability"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "Polymorphism means?",
+    "options": [
+      "Many forms",
+      "Many classes",
+      "Many objects",
+      "Many functions"
+    ],
+    "answer": "Many forms"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "Abstraction hides?",
+    "options": [
+      "Data",
+      "Complexity/Implementation",
+      "Classes",
+      "Objects"
+    ],
+    "answer": "Complexity/Implementation"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "Constructor is used for?",
+    "options": [
+      "Deletion",
+      "Initialization",
+      "Copying",
+      "Printing"
+    ],
+    "answer": "Initialization"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "Overloading occurs at?",
+    "options": [
+      "Runtime",
+      "Compile time",
+      "Load time",
+      "Execution time"
+    ],
+    "answer": "Compile time"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "Overriding occurs at?",
+    "options": [
+      "Compile time",
+      "Runtime",
+      "Design time",
+      "Coding time"
+    ],
+    "answer": "Runtime"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "Interface provides?",
+    "options": [
+      "Partial abstraction",
+      "Full abstraction",
+      "Implementation",
+      "Storage"
+    ],
+    "answer": "Full abstraction"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "Static keyword belongs to?",
+    "options": [
+      "Object",
+      "Class",
+      "Method",
+      "Variable"
+    ],
+    "answer": "Class"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "Final keyword prevents?",
+    "options": [
+      "Inheritance",
+      "Overriding",
+      "Modification",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "Private access modifier means?",
+    "options": [
+      "Public access",
+      "Restricted access (within class)",
+      "Protected access",
+      "Package access"
+    ],
+    "answer": "Restricted access (within class)"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "HAS-A relation means?",
+    "options": [
+      "Inheritance",
+      "Composition/Aggregation",
+      "Polymorphism",
+      "Abstraction"
+    ],
+    "answer": "Composition/Aggregation"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "IS-A relation means?",
+    "options": [
+      "Composition",
+      "Inheritance",
+      "Interface",
+      "Overloading"
+    ],
+    "answer": "Inheritance"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "Object state is stored in?",
+    "options": [
+      "Methods",
+      "Attributes/Variables",
+      "Constructor",
+      "Class"
+    ],
+    "answer": "Attributes/Variables"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "Method defines?",
+    "options": [
+      "State",
+      "Behavior",
+      "Identity",
+      "Color"
+    ],
+    "answer": "Behavior"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "OOP improves?",
+    "options": [
+      "Speed",
+      "Maintainability",
+      "Graphics",
+      "Memory"
+    ],
+    "answer": "Maintainability"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "Encapsulation improves?",
+    "options": [
+      "Performance",
+      "Security",
+      "Design",
+      "Testing"
+    ],
+    "answer": "Security"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "Object communicates via?",
+    "options": [
+      "Variables",
+      "Methods",
+      "Classes",
+      "Files"
+    ],
+    "answer": "Methods"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "Inheritance models which relationship?",
+    "options": [
+      "HAS-A",
+      "IS-A",
+      "USES-A",
+      "None"
+    ],
+    "answer": "IS-A"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "Class variables are shared by?",
+    "options": [
+      "One object",
+      "All objects",
+      "No objects",
+      "Subclasses only"
+    ],
+    "answer": "All objects"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "Abstraction focuses on?",
+    "options": [
+      "Details",
+      "Essential features",
+      "Code",
+      "Data"
+    ],
+    "answer": "Essential features"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "Interface defines?",
+    "options": [
+      "Implementation",
+      "Contract/Blueprint",
+      "Variables",
+      "Objects"
+    ],
+    "answer": "Contract/Blueprint"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "Access modifier 'public' means?",
+    "options": [
+      "Private",
+      "Protected",
+      "Accessible everywhere",
+      "Package only"
+    ],
+    "answer": "Accessible everywhere"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "Static method can be called without?",
+    "options": [
+      "Class",
+      "Object instance",
+      "Parameters",
+      "Variables"
+    ],
+    "answer": "Object instance"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "OOP reduces?",
+    "options": [
+      "Flexibility",
+      "Complexity",
+      "Reusability",
+      "Security"
+    ],
+    "answer": "Complexity"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "Attribute stores?",
+    "options": [
+      "Logic",
+      "Data",
+      "Code",
+      "Loop"
+    ],
+    "answer": "Data"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "Reusability is achieved mainly using?",
+    "options": [
+      "Encapsulation",
+      "Inheritance",
+      "Polymorphism",
+      "Abstraction"
+    ],
+    "answer": "Inheritance"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "Object is created using keyword?",
+    "options": [
+      "create",
+      "new",
+      "make",
+      "build"
+    ],
+    "answer": "new"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "Abstract class cannot be?",
+    "options": [
+      "Inherited",
+      "Instantiated",
+      "Compiled",
+      "Used"
+    ],
+    "answer": "Instantiated"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "Polymorphism improves?",
+    "options": [
+      "Rigidity",
+      "Flexibility",
+      "Security",
+      "Speed"
+    ],
+    "answer": "Flexibility"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "Class acts as a?",
+    "options": [
+      "Function",
+      "Blueprint/Template",
+      "Variable",
+      "Array"
+    ],
+    "answer": "Blueprint/Template"
+  },
+  {
+    "subject": "OOP",
+    "topic": "OOP",
+    "question": "OOP models real-world using?",
+    "options": [
+      "Functions",
+      "Objects",
+      "Pointers",
+      "Loops"
+    ],
+    "answer": "Objects"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "OSI model has how many layers?",
+    "options": [
+      "5",
+      "7",
+      "4",
+      "6"
+    ],
+    "answer": "7"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "TCP provides?",
+    "options": [
+      "Best effort",
+      "Reliable communication",
+      "Unreliable communication",
+      "No connection"
+    ],
+    "answer": "Reliable communication"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "UDP is used when?",
+    "options": [
+      "Reliability needed",
+      "Speed needed",
+      "Order needed",
+      "Security needed"
+    ],
+    "answer": "Speed needed"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "IP address identifies?",
+    "options": [
+      "User",
+      "Device",
+      "Application",
+      "Process"
+    ],
+    "answer": "Device"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "DNS converts?",
+    "options": [
+      "IP to Domain",
+      "Domain to IP",
+      "MAC to IP",
+      "IP to MAC"
+    ],
+    "answer": "Domain to IP"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "Router works at which layer?",
+    "options": [
+      "Physical",
+      "Data Link",
+      "Network",
+      "Transport"
+    ],
+    "answer": "Network"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "Switch works at which layer?",
+    "options": [
+      "Physical",
+      "Data Link",
+      "Network",
+      "Application"
+    ],
+    "answer": "Data Link"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "HTTP is a?",
+    "options": [
+      "Stateful protocol",
+      "Stateless protocol",
+      "Secure protocol",
+      "Fast protocol"
+    ],
+    "answer": "Stateless protocol"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "HTTPS adds?",
+    "options": [
+      "Speed",
+      "Encryption",
+      "Compression",
+      "Reliability"
+    ],
+    "answer": "Encryption"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "Bandwidth measures?",
+    "options": [
+      "Speed",
+      "Capacity",
+      "Latency",
+      "Distance"
+    ],
+    "answer": "Capacity"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "Latency means?",
+    "options": [
+      "Capacity",
+      "Delay",
+      "Loss",
+      "Throughput"
+    ],
+    "answer": "Delay"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "SMTP is used for?",
+    "options": [
+      "File transfer",
+      "Email",
+      "Web browsing",
+      "Chatting"
+    ],
+    "answer": "Email"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "FTP is used for?",
+    "options": [
+      "Email",
+      "File transfer",
+      "Streaming",
+      "Calling"
+    ],
+    "answer": "File transfer"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "ARP resolves?",
+    "options": [
+      "Domain to IP",
+      "IP to MAC",
+      "MAC to IP",
+      "IP to Port"
+    ],
+    "answer": "IP to MAC"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "Firewall provides?",
+    "options": [
+      "Speed",
+      "Security",
+      "Storage",
+      "Connectivity"
+    ],
+    "answer": "Security"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "LAN covers?",
+    "options": [
+      "Large area",
+      "Small area",
+      "Internet",
+      "Everything"
+    ],
+    "answer": "Small area"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "WAN covers?",
+    "options": [
+      "Link",
+      "Room",
+      "City/Country",
+      "Single Building"
+    ],
+    "answer": "City/Country"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "ICMP is used for?",
+    "options": [
+      "Transfer",
+      "Ping",
+      "Routing",
+      "Email"
+    ],
+    "answer": "Ping"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "Port identifies?",
+    "options": [
+      "Host",
+      "Application/Service",
+      "Network",
+      "Router"
+    ],
+    "answer": "Application/Service"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "Packet switching is used in?",
+    "options": [
+      "Telephone",
+      "Internet",
+      "Radio",
+      "TV"
+    ],
+    "answer": "Internet"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "Data transmitted in units called?",
+    "options": [
+      "Bytes",
+      "Packets",
+      "Files",
+      "Bits"
+    ],
+    "answer": "Packets"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "Protocol defines?",
+    "options": [
+      "Hardware",
+      "Software",
+      "Rules",
+      "Users"
+    ],
+    "answer": "Rules"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "LAN speed is usually?",
+    "options": [
+      "Low",
+      "High",
+      "Variable",
+      "Unknown"
+    ],
+    "answer": "High"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "WAN connects?",
+    "options": [
+      "Devices",
+      "Rooms",
+      "Cities/Countries",
+      "Building"
+    ],
+    "answer": "Cities/Countries"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "MAC address is?",
+    "options": [
+      "Logical address",
+      "Physical address",
+      "Virtual address",
+      "Temporary address"
+    ],
+    "answer": "Physical address"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "Router selects path using?",
+    "options": [
+      "ARP table",
+      "Routing table",
+      "MAC table",
+      "DNS table"
+    ],
+    "answer": "Routing table"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "TCP ensures?",
+    "options": [
+      "Speed",
+      "Delivery",
+      "Security",
+      "Privacy"
+    ],
+    "answer": "Delivery"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "UDP provides?",
+    "options": [
+      "Reliability",
+      "Fast transfer",
+      "Checking",
+      "Ordering"
+    ],
+    "answer": "Fast transfer"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "DNS is hierarchical because?",
+    "options": [
+      "It is fast",
+      "It is distributed",
+      "It is secure",
+      "It is simple"
+    ],
+    "answer": "It is distributed"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "HTTP works on which layer?",
+    "options": [
+      "Network",
+      "Transport",
+      "Application",
+      "Data Link"
+    ],
+    "answer": "Application"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "Encryption ensures?",
+    "options": [
+      "Speed",
+      "Confidentiality",
+      "Efficiency",
+      "Availability"
+    ],
+    "answer": "Confidentiality"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "Switch forwards based on?",
+    "options": [
+      "IP address",
+      "MAC address",
+      "Port",
+      "Protocol"
+    ],
+    "answer": "MAC address"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "Gateway connects?",
+    "options": [
+      "Same networks",
+      "Different networks",
+      "Universities",
+      "Computers"
+    ],
+    "answer": "Different networks"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "Network topology example?",
+    "options": [
+      "Circle",
+      "Star",
+      "Square",
+      "Triangle"
+    ],
+    "answer": "Star"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "Bandwidth unit?",
+    "options": [
+      "Hz",
+      "Mbps",
+      "Sec",
+      "Meters"
+    ],
+    "answer": "Mbps"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "IP uniquely identifies?",
+    "options": [
+      "User",
+      "Device",
+      "Location",
+      "Time"
+    ],
+    "answer": "Device"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "Email protocol example?",
+    "options": [
+      "HTTP",
+      "SMTP",
+      "FTP",
+      "SSH"
+    ],
+    "answer": "SMTP"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "Secure protocol?",
+    "options": [
+      "HTTP",
+      "HTTPS",
+      "FTP",
+      "Telnet"
+    ],
+    "answer": "HTTPS"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "Packet loss affects?",
+    "options": [
+      "Nothing",
+      "Reliability",
+      "Cost",
+      "Security"
+    ],
+    "answer": "Reliability"
+  },
+  {
+    "subject": "CN",
+    "topic": "CN",
+    "question": "Network interface connects?",
+    "options": [
+      "User to App",
+      "Device to network",
+      "Disk to RAM",
+      "Mouse to PC"
+    ],
+    "answer": "Device to network"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "DBMS stands for?",
+    "options": [
+      "Database Management System",
+      "Data Backup Management System",
+      "Data Basic Management System",
+      "Database Master System"
+    ],
+    "answer": "Database Management System"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "SQL is used for?",
+    "options": [
+      "Styling pages",
+      "Querying data",
+      "Building APIs",
+      "Compiling code"
+    ],
+    "answer": "Querying data"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "Primary key allows?",
+    "options": [
+      "Duplicate values",
+      "Null values",
+      "Unique values",
+      "Any value"
+    ],
+    "answer": "Unique values"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "Foreign key ensures?",
+    "options": [
+      "Uniqueness",
+      "Referential integrity",
+      "Nullability",
+      "Indexing"
+    ],
+    "answer": "Referential integrity"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "ACID property 'A' stands for?",
+    "options": [
+      "Availability",
+      "Accuracy",
+      "Atomicity",
+      "Access"
+    ],
+    "answer": "Atomicity"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "JOIN is used to?",
+    "options": [
+      "Delete tables",
+      "create tables",
+      "Combine tables",
+      "Update tables"
+    ],
+    "answer": "Combine tables"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "Normalization reduces?",
+    "options": [
+      "Security",
+      "Redundancy",
+      "Performance",
+      "Complexity"
+    ],
+    "answer": "Redundancy"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "Index improves?",
+    "options": [
+      "Insert speed",
+      "Update speed",
+      "Search speed",
+      "Delete speed"
+    ],
+    "answer": "Search speed"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "DELETE removes?",
+    "options": [
+      "Table structure",
+      "Selected rows",
+      "Database",
+      "Index"
+    ],
+    "answer": "Selected rows"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "TRUNCATE does what?",
+    "options": [
+      "Deletes table",
+      "Removes all rows quickly",
+      "Removes specific rows",
+      "Updates rows"
+    ],
+    "answer": "Removes all rows quickly"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "WHERE clause is used for?",
+    "options": [
+      "Sorting",
+      "Grouping",
+      "Filtering",
+      "Joining"
+    ],
+    "answer": "Filtering"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "GROUP BY is used for?",
+    "options": [
+      "Ordering",
+      "Aggregation",
+      "Filtering",
+      "Selecting"
+    ],
+    "answer": "Aggregation"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "A View is?",
+    "options": [
+      "Physical table",
+      "Virtual table",
+      "Stored procedure",
+      "Index"
+    ],
+    "answer": "Virtual table"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "Transaction is?",
+    "options": [
+      "Physical unit",
+      "Logical unit of work",
+      "Database file",
+      "Backup"
+    ],
+    "answer": "Logical unit of work"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "Candidate key is?",
+    "options": [
+      "Foreign key",
+      "Primary key",
+      "Possible primary key",
+      "Super key"
+    ],
+    "answer": "Possible primary key"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "Schema defines?",
+    "options": [
+      "Data",
+      "Structure",
+      "Users",
+      "Permissions"
+    ],
+    "answer": "Structure"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "NULL in database means?",
+    "options": [
+      "Zero",
+      "Empty string",
+      "Unknown value",
+      "False"
+    ],
+    "answer": "Unknown value"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "Stored procedure is?",
+    "options": [
+      "Table",
+      "View",
+      "Precompiled SQL",
+      "Trigger"
+    ],
+    "answer": "Precompiled SQL"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "Deadlock occurs due to?",
+    "options": [
+      "High load",
+      "Circular wait",
+      "Memory full",
+      "Disk error"
+    ],
+    "answer": "Circular wait"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "Denormalization improves?",
+    "options": [
+      "Write performance",
+      "Read performance",
+      "Storage",
+      "Consistency"
+    ],
+    "answer": "Read performance"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "SQL stands for?",
+    "options": [
+      "Structured Query Language",
+      "Standard Query Logic",
+      "Simple Query Language",
+      "System Query Logic"
+    ],
+    "answer": "Structured Query Language"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "Table row is called?",
+    "options": [
+      "Attribute",
+      "Tuple",
+      "Field",
+      "Key"
+    ],
+    "answer": "Tuple"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "Column is called?",
+    "options": [
+      "Tuple",
+      "Attribute",
+      "Record",
+      "Entity"
+    ],
+    "answer": "Attribute"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "Unique constraint ensures?",
+    "options": [
+      "Null values",
+      "No duplicates",
+      "Sorting",
+      "Referencing"
+    ],
+    "answer": "No duplicates"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "Default sorting order in SQL?",
+    "options": [
+      "Descending",
+      "Random",
+      "Ascending",
+      "None"
+    ],
+    "answer": "Ascending"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "Example of aggregate function?",
+    "options": [
+      "SELECT",
+      "WHERE",
+      "SUM()",
+      "INSERT"
+    ],
+    "answer": "SUM()"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "Foreign key references?",
+    "options": [
+      "Unique key",
+      "Primary key",
+      "Check constraint",
+      "Index"
+    ],
+    "answer": "Primary key"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "Database designed using?",
+    "options": [
+      "Flowchart",
+      "ER model",
+      "UML",
+      "DFD"
+    ],
+    "answer": "ER model"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "Relationship defines?",
+    "options": [
+      "Data types",
+      "Table connection",
+      "Constraints",
+      "Keys"
+    ],
+    "answer": "Table connection"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "Redundancy causes?",
+    "options": [
+      "Efficiency",
+      "Wasted space",
+      "Security",
+      "Speed"
+    ],
+    "answer": "Wasted space"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "DBMS improves?",
+    "options": [
+      "Complexity",
+      "Data consistency",
+      "Redundancy",
+      "Errors"
+    ],
+    "answer": "Data consistency"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "Backup protects against?",
+    "options": [
+      "Hackers",
+      "Data loss",
+      "Viruses",
+      "Spam"
+    ],
+    "answer": "Data loss"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "Index stored using?",
+    "options": [
+      "Stack",
+      "Queue",
+      "B-tree",
+      "Linked List"
+    ],
+    "answer": "B-tree"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "Trigger fires when?",
+    "options": [
+      "User logins",
+      "Event occurs",
+      "System restarts",
+      "Query fails"
+    ],
+    "answer": "Event occurs"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "SQL keyword to remove table?",
+    "options": [
+      "DELETE",
+      "REMOVE",
+      "DROP",
+      "ERASE"
+    ],
+    "answer": "DROP"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "Constraint ensures?",
+    "options": [
+      "Fast queries",
+      "Valid data",
+      "Security",
+      "Backup"
+    ],
+    "answer": "Valid data"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "ER diagram used for?",
+    "options": [
+      "Coding",
+      "Testing",
+      "Design",
+      "Deployment"
+    ],
+    "answer": "Design"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "Transaction ensures?",
+    "options": [
+      "Speed",
+      "Integrity",
+      "Security",
+      "Space"
+    ],
+    "answer": "Integrity"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "Log used for?",
+    "options": [
+      "Security",
+      "Recovery",
+      "Performance",
+      "access"
+    ],
+    "answer": "Recovery"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "DBMS",
+    "question": "Data independence means?",
+    "options": [
+      "No data",
+      "Structure changes without affecting apps",
+      "Isolated data",
+      "Remote data"
+    ],
+    "answer": "Structure changes without affecting apps"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "ML stands for?",
+    "options": [
+      "Machine Learning",
+      "Manual Learning",
+      "Mechanical Learning",
+      "Meta Learning"
+    ],
+    "answer": "Machine Learning"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Supervised learning uses?",
+    "options": [
+      "Unlabeled data",
+      "Labeled data",
+      "No data",
+      "Random data"
+    ],
+    "answer": "Labeled data"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Unsupervised learning finds?",
+    "options": [
+      "Labels",
+      "Patterns/Structure",
+      "Errors",
+      "Time"
+    ],
+    "answer": "Patterns/Structure"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Regression predicts?",
+    "options": [
+      "Categories",
+      "Continuous values",
+      "Images",
+      "Text"
+    ],
+    "answer": "Continuous values"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Classification predicts?",
+    "options": [
+      "Numbers",
+      "Categories/Classes",
+      "Time",
+      "Distance"
+    ],
+    "answer": "Categories/Classes"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Overfitting means?",
+    "options": [
+      "Learning nothing",
+      "Memorizing noise/training data",
+      "Generalizing well",
+      "Underlearning"
+    ],
+    "answer": "Memorizing noise/training data"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Underfitting means?",
+    "options": [
+      "Too complex",
+      "Poor learning/Too simple",
+      "Perfect learning",
+      "High accuracy"
+    ],
+    "answer": "Poor learning/Too simple"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Feature is?",
+    "options": [
+      "Output",
+      "Input variable",
+      "Error",
+      "Model"
+    ],
+    "answer": "Input variable"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Label is?",
+    "options": [
+      "Input",
+      "Output variable",
+      "Code",
+      "Server"
+    ],
+    "answer": "Output variable"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Loss function measures?",
+    "options": [
+      "Speed",
+      "Error/Difference",
+      "Accuracy",
+      "Memory"
+    ],
+    "answer": "Error/Difference"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Accuracy measures?",
+    "options": [
+      "Speed",
+      "Correct predictions",
+      "Training time",
+      "Data size"
+    ],
+    "answer": "Correct predictions"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Neural network is inspired by?",
+    "options": [
+      "Computer chip",
+      "Human brain",
+      "Solar system",
+      "Ant colony"
+    ],
+    "answer": "Human brain"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Epoch means?",
+    "options": [
+      "One step",
+      "One full pass of dataset",
+      "One hour",
+      "One error"
+    ],
+    "answer": "One full pass of dataset"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Gradient descent is used for?",
+    "options": [
+      "Sorting",
+      "Optimization",
+      "Searching",
+      "Storing"
+    ],
+    "answer": "Optimization"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Learning rate controls?",
+    "options": [
+      "Speed of training",
+      "Step size of update",
+      "Memory usage",
+      "Dataset size"
+    ],
+    "answer": "Step size of update"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Clustering groups?",
+    "options": [
+      "Labeled data",
+      "Similar data points",
+      "Random data",
+      "Files"
+    ],
+    "answer": "Similar data points"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "K-means is a?",
+    "options": [
+      "Classification algo",
+      "Clustering algorithm",
+      "Regression algo",
+      "Database"
+    ],
+    "answer": "Clustering algorithm"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Decision tree is used for?",
+    "options": [
+      "Only Regression",
+      "Classification & Regression",
+      "Only Clustering",
+      "Storage"
+    ],
+    "answer": "Classification & Regression"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Random Forest is?",
+    "options": [
+      "Single tree",
+      "Ensemble of trees",
+      "Linear model",
+      "Neural network"
+    ],
+    "answer": "Ensemble of trees"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "SVM stands for?",
+    "options": [
+      "Simple Vector Machine",
+      "Support Vector Machine",
+      "Super Vector Model",
+      "Standard Value Model"
+    ],
+    "answer": "Support Vector Machine"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Confusion matrix evaluates?",
+    "options": [
+      "Regression",
+      "Classification model",
+      "Clustering",
+      "Reinforcement learning"
+    ],
+    "answer": "Classification model"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Precision measures?",
+    "options": [
+      "Total correct",
+      "Correct positive predictions",
+      "Coverage",
+      "Speed"
+    ],
+    "answer": "Correct positive predictions"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Recall measures?",
+    "options": [
+      "Accuracy",
+      "Sensitivity/Coverage",
+      "Speed",
+      "Error"
+    ],
+    "answer": "Sensitivity/Coverage"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "F1-score balances?",
+    "options": [
+      "Speed & Memory",
+      "Precision & Recall",
+      "Bias & Variance",
+      "Train & Test"
+    ],
+    "answer": "Precision & Recall"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Dataset rows are called?",
+    "options": [
+      "Features",
+      "Samples",
+      "Labels",
+      "Models"
+    ],
+    "answer": "Samples"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Dataset columns are called?",
+    "options": [
+      "Samples",
+      "Features",
+      "Errors",
+      "Nodes"
+    ],
+    "answer": "Features"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "PCA is used for?",
+    "options": [
+      "Add features",
+      "Dimensionality reduction",
+      "Clustering",
+      "Classification"
+    ],
+    "answer": "Dimensionality reduction"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Training requires?",
+    "options": [
+      "No data",
+      "Data",
+      "Only code",
+      "User input"
+    ],
+    "answer": "Data"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Inference means?",
+    "options": [
+      "Training phase",
+      "Prediction phase",
+      "Testing",
+      "Coding"
+    ],
+    "answer": "Prediction phase"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Regularization prevents?",
+    "options": [
+      "Underfitting",
+      "Overfitting",
+      "Learning",
+      "Deployment"
+    ],
+    "answer": "Overfitting"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Data preprocessing includes?",
+    "options": [
+      "Cleaning/Normalization",
+      "Nothing",
+      "Deleting data",
+      "Hiding data"
+    ],
+    "answer": "Cleaning/Normalization"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Missing values handled using?",
+    "options": [
+      "Ignoring",
+      "Imputation",
+      "Deleting column",
+      "Guessing"
+    ],
+    "answer": "Imputation"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Feature engineering improves?",
+    "options": [
+      "Speed",
+      "Model accuracy",
+      "Data size",
+      "RAM"
+    ],
+    "answer": "Model accuracy"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Training data should be?",
+    "options": [
+      "Biased",
+      "Representative",
+      "Small",
+      "Random"
+    ],
+    "answer": "Representative"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Validation set used for?",
+    "options": [
+      "Final testing",
+      "Hyperparameter tuning",
+      "Training",
+      "Deployment"
+    ],
+    "answer": "Hyperparameter tuning"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Logistic regression used for?",
+    "options": [
+      "Regression",
+      "Classification",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Classification"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Linear regression predicts?",
+    "options": [
+      "Class",
+      "Continuous value",
+      "Image",
+      "Sound"
+    ],
+    "answer": "Continuous value"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Activation function adds?",
+    "options": [
+      "Speed",
+      "Non-linearity",
+      "Linearity",
+      "Memory"
+    ],
+    "answer": "Non-linearity"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "ReLU stands for?",
+    "options": [
+      "Real Linear Unit",
+      "Rectified Linear Unit",
+      "Random Logic Unit",
+      "Rapid Learning Unit"
+    ],
+    "answer": "Rectified Linear Unit"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Sigmoid outputs range?",
+    "options": [
+      "-1 to 1",
+      "0 to 1",
+      "0 to 100",
+      "Negative infinity to positive infinity"
+    ],
+    "answer": "0 to 1"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Softmax used for?",
+    "options": [
+      "Binary classification",
+      "Multi-class classification",
+      "Regression",
+      "Clustering"
+    ],
+    "answer": "Multi-class classification"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Ensemble learning combines?",
+    "options": [
+      "Data",
+      "Multiple models",
+      "Features",
+      "Errors"
+    ],
+    "answer": "Multiple models"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Bagging reduces?",
+    "options": [
+      "Bias",
+      "Variance",
+      "Data",
+      "Speed"
+    ],
+    "answer": "Variance"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Boosting reduces?",
+    "options": [
+      "Variance",
+      "Bias",
+      "Noise",
+      "Data"
+    ],
+    "answer": "Bias"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "k-NN works based on?",
+    "options": [
+      "Probability",
+      "Distance",
+      "Tree",
+      "Neural Network"
+    ],
+    "answer": "Distance"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Deep learning uses?",
+    "options": [
+      "One layer",
+      "Multi-layer neural networks",
+      "Trees",
+      "Rules"
+    ],
+    "answer": "Multi-layer neural networks"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "CNN used for?",
+    "options": [
+      "Text",
+      "Image tasks",
+      "Audio",
+      "Numbers"
+    ],
+    "answer": "Image tasks"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "RNN used for?",
+    "options": [
+      "Static data",
+      "Sequential data",
+      "Images",
+      "Tables"
+    ],
+    "answer": "Sequential data"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Transfer learning reuses?",
+    "options": [
+      "Data",
+      "Pre-trained model",
+      "Code",
+      "Hardware"
+    ],
+    "answer": "Pre-trained model"
+  },
+  {
+    "subject": "ML",
+    "topic": "ML",
+    "question": "Main goal of ML?",
+    "options": [
+      "Store data",
+      "Learn patterns from data",
+      "Create data",
+      "Encrypt data"
+    ],
+    "answer": "Learn patterns from data"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "HTML stands for?",
+    "options": [
+      "Hyper Text Markup Language",
+      "Home Tool Markup Language",
+      "Hyperlinks and Text Markup Language",
+      "High Text Machine Language"
+    ],
+    "answer": "Hyper Text Markup Language"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "CSS is used for?",
+    "options": [
+      "Styling",
+      "Structure",
+      "Programming",
+      "Data"
+    ],
+    "answer": "Styling"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "JS is used for?",
+    "options": [
+      "Database",
+      "Interactivity/Logic",
+      "Styling",
+      "Documentation"
+    ],
+    "answer": "Interactivity/Logic"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "Browser renders?",
+    "options": [
+      "Server code",
+      "HTML/CSS/JS",
+      "Database",
+      "Images only"
+    ],
+    "answer": "HTML/CSS/JS"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "DOM stands for?",
+    "options": [
+      "Document Object Model",
+      "Data Object Model",
+      "Disk Operating Method",
+      "Document Order Mechanism"
+    ],
+    "answer": "Document Object Model"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "HTTP method GET does what?",
+    "options": [
+      "Sends data",
+      "Fetches data/resource",
+      "Deletes data",
+      "Updates data"
+    ],
+    "answer": "Fetches data/resource"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "Who runs the Frontend?",
+    "options": [
+      "Server",
+      "Browser/Client",
+      "Database",
+      "Network"
+    ],
+    "answer": "Browser/Client"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "Who runs the Backend?",
+    "options": [
+      "User",
+      "Server",
+      "Browser",
+      "Design tool"
+    ],
+    "answer": "Server"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "Status 404 means?",
+    "options": [
+      "Success",
+      "Not Found",
+      "Server Error",
+      "Unauthorized"
+    ],
+    "answer": "Not Found"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "JSON format is?",
+    "options": [
+      "Binary code",
+      "Key-value pair text",
+      "HTML tags",
+      "SQL query"
+    ],
+    "answer": "Key-value pair text"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "REST is a?",
+    "options": [
+      "Protocol",
+      "Architectural style",
+      "Language",
+      "Software"
+    ],
+    "answer": "Architectural style"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "Responsive design uses?",
+    "options": [
+      "JavaScript",
+      "Media Queries",
+      "HTML Only",
+      "Databases"
+    ],
+    "answer": "Media Queries"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "LocalStorage stores data in?",
+    "options": [
+      "Server",
+      "Browser/Client",
+      "Cloud",
+      "Hard Drive only"
+    ],
+    "answer": "Browser/Client"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "React is a?",
+    "options": [
+      "Backend framework",
+      "Frontend Library",
+      "Database",
+      "Language"
+    ],
+    "answer": "Frontend Library"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "Node.js is?",
+    "options": [
+      "Language",
+      "JavaScript Runtime",
+      "Database",
+      "Framework"
+    ],
+    "answer": "JavaScript Runtime"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "Express is used for?",
+    "options": [
+      "Frontend",
+      "Backend APIs",
+      "Database",
+      "Testing"
+    ],
+    "answer": "Backend APIs"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "HTML tag for link?",
+    "options": [
+      "<link>",
+      "<a>",
+      "<href>",
+      "<url>"
+    ],
+    "answer": "<a>"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "Image tag?",
+    "options": [
+      "<img>",
+      "<image>",
+      "<pic>",
+      "<photo>"
+    ],
+    "answer": "<img>"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "CSS Flexbox is used for?",
+    "options": [
+      "Animation",
+      "Layout (1D)",
+      "Database",
+      "Logic"
+    ],
+    "answer": "Layout (1D)"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "Grid is used for?",
+    "options": [
+      "1D Layout",
+      "2D Layout",
+      "Text styling",
+      "Colors"
+    ],
+    "answer": "2D Layout"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "AJAX allows?",
+    "options": [
+      "Sync requests",
+      "Async requests/updates",
+      "Page reload",
+      "Offline access"
+    ],
+    "answer": "Async requests/updates"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "Fetch API replaces?",
+    "options": [
+      "HTML",
+      "XMLHttpRequest (XHR)",
+      "CSS",
+      "Node.js"
+    ],
+    "answer": "XMLHttpRequest (XHR)"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "Status 200 means?",
+    "options": [
+      "Error",
+      "Success/OK",
+      "Redirect",
+      "Forbidden"
+    ],
+    "answer": "Success/OK"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "Status 500 means?",
+    "options": [
+      "Not Found",
+      "Server Error",
+      "Success",
+      "Created"
+    ],
+    "answer": "Server Error"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "SessionStorage lasts for?",
+    "options": [
+      "Always",
+      "Current Session/Tab",
+      "1 year",
+      "1 day"
+    ],
+    "answer": "Current Session/Tab"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "Authentication is?",
+    "options": [
+      "Checking permissions",
+      "Verifying identity",
+      "Encrypting data",
+      "Sending email"
+    ],
+    "answer": "Verifying identity"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "Authorization is?",
+    "options": [
+      "Checking identity",
+      "Checking access rights/permissions",
+      "Logging in",
+      "Signing up"
+    ],
+    "answer": "Checking access rights/permissions"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "MVC stands for?",
+    "options": [
+      "Model View Controller",
+      "Main View Code",
+      "Model Variable Class",
+      "Make View Create"
+    ],
+    "answer": "Model View Controller"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "Git is used for?",
+    "options": [
+      "Coding",
+      "Version Control",
+      "Hosting",
+      "Testing"
+    ],
+    "answer": "Version Control"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "Git commit does what?",
+    "options": [
+      "Deletes code",
+      "Saves snapshot",
+      "Uploads code",
+      "Downloads code"
+    ],
+    "answer": "Saves snapshot"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "Git push does what?",
+    "options": [
+      "Saves locally",
+      "Uploads changes to remote",
+      "Deletes remote",
+      "Merges code"
+    ],
+    "answer": "Uploads changes to remote"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "Hosting means?",
+    "options": [
+      "Writing code",
+      "Making app available online",
+      "Testing app",
+      "Deleting app"
+    ],
+    "answer": "Making app available online"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "CORS handles?",
+    "options": [
+      "Security",
+      "Cross-Origin Requests",
+      "Database connection",
+      "Routing"
+    ],
+    "answer": "Cross-Origin Requests"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "SPA stands for?",
+    "options": [
+      "Single Page Application",
+      "Simple Page App",
+      "Secure Protocol App",
+      "Standard Process App"
+    ],
+    "answer": "Single Page Application"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "Component in React is?",
+    "options": [
+      "Variable",
+      "Reusable UI block",
+      "Database table",
+      "Server function"
+    ],
+    "answer": "Reusable UI block"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "State in React manages?",
+    "options": [
+      "Static content",
+      "Dynamic data",
+      "CSS",
+      "Files"
+    ],
+    "answer": "Dynamic data"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "Props are used to?",
+    "options": [
+      "Style components",
+      "Pass data to components",
+      "Store state",
+      "Delete data"
+    ],
+    "answer": "Pass data to components"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "JWS stands for?",
+    "options": [
+      "Java Web System",
+      "JSON Web Token",
+      "JavaScript Web Standard",
+      "Just Web Socket"
+    ],
+    "answer": "JSON Web Token"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "Full-stack developer knows?",
+    "options": [
+      "Only CSS",
+      "Frontend + Backend",
+      "Only SQL",
+      "Only Design"
+    ],
+    "answer": "Frontend + Backend"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "Minification reduces?",
+    "options": [
+      "Code quality",
+      "File size",
+      "Features",
+      "Security"
+    ],
+    "answer": "File size"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "SEO improves?",
+    "options": [
+      "Code speed",
+      "Search Engine Visibility",
+      "Database speed",
+      "Server security"
+    ],
+    "answer": "Search Engine Visibility"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "Lazy loading improves?",
+    "options": [
+      "Development speed",
+      "Initial load performance",
+      "Code readability",
+      "Security"
+    ],
+    "answer": "Initial load performance"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "WebSocket enables?",
+    "options": [
+      "Static pages",
+      "Real-time communication",
+      "Database queries",
+      "Styling"
+    ],
+    "answer": "Real-time communication"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "Accessibility ensures?",
+    "options": [
+      "Site is fast",
+      "Site is usable by everyone",
+      "Site is secure",
+      "Site is colorful"
+    ],
+    "answer": "Site is usable by everyone"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "Jest is a?",
+    "options": [
+      "Database",
+      "Testing Framework",
+      "Language",
+      "Editor"
+    ],
+    "answer": "Testing Framework"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "NPM stands for?",
+    "options": [
+      "Nice Package Manager",
+      "Node Package Manager",
+      "New Project Model",
+      "Node Project Maker"
+    ],
+    "answer": "Node Package Manager"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "Semantic HTML improves?",
+    "options": [
+      "Speed",
+      "SEO & Accessibility",
+      "Colors",
+      "Logic"
+    ],
+    "answer": "SEO & Accessibility"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "Z-index controls?",
+    "options": [
+      "Width",
+      "Stacking order",
+      "Height",
+      "Transparency"
+    ],
+    "answer": "Stacking order"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "Box Model components?",
+    "options": [
+      "Content, Padding, Border, Margin",
+      "Header, Footer, Body",
+      "HTML, CSS, JS",
+      "Color, Font, Size"
+    ],
+    "answer": "Content, Padding, Border, Margin"
+  },
+  {
+    "subject": "WEBDEV",
+    "topic": "WEBDEV",
+    "question": "Bootstrap is a?",
+    "options": [
+      "Language",
+      "CSS Framework",
+      "Database",
+      "Browser"
+    ],
+    "answer": "CSS Framework"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "20% of 200 is?",
+    "options": [
+      "20",
+      "40",
+      "50",
+      "100"
+    ],
+    "answer": "40"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "Average of 2, 4, 6 is?",
+    "options": [
+      "4",
+      "3",
+      "5",
+      "6"
+    ],
+    "answer": "4"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "LCM of 3 and 5 is?",
+    "options": [
+      "10",
+      "15",
+      "8",
+      "3"
+    ],
+    "answer": "15"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "25% of 400 is?",
+    "options": [
+      "100",
+      "200",
+      "50",
+      "25"
+    ],
+    "answer": "100"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "Speed formula is?",
+    "options": [
+      "Distance*Time",
+      "Distance/Time",
+      "Time/Distance",
+      "Distance+Time"
+    ],
+    "answer": "Distance/Time"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "Profit formula is?",
+    "options": [
+      "CP - SP",
+      "SP - CP",
+      "SP + CP",
+      "SP * CP"
+    ],
+    "answer": "SP - CP"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "Ratio 2:3 means?",
+    "options": [
+      "Addition",
+      "Comparison",
+      "Multiplication",
+      "Subtraction"
+    ],
+    "answer": "Comparison"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "Square of 12 is?",
+    "options": [
+      "122",
+      "144",
+      "124",
+      "100"
+    ],
+    "answer": "144"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "Next number in series: 5, 10, 20?",
+    "options": [
+      "30",
+      "40",
+      "25",
+      "35"
+    ],
+    "answer": "40"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "HCF of 8 and 12 is?",
+    "options": [
+      "2",
+      "4",
+      "8",
+      "6"
+    ],
+    "answer": "4"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "50% is equal to?",
+    "options": [
+      "1/4",
+      "1/2",
+      "1/3",
+      "1"
+    ],
+    "answer": "1/2"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "Time and work relation?",
+    "options": [
+      "Direct",
+      "Inverse",
+      "Equal",
+      "None"
+    ],
+    "answer": "Inverse"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "Area of rectangle?",
+    "options": [
+      "L+B",
+      "L*B",
+      "2(L+B)",
+      "L*L"
+    ],
+    "answer": "L*B"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "3/5 as percentage?",
+    "options": [
+      "30%",
+      "60%",
+      "40%",
+      "50%"
+    ],
+    "answer": "60%"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "Discount reduces?",
+    "options": [
+      "Cost Price",
+      "Selling Price/Marked Price",
+      "Profit",
+      "Loss"
+    ],
+    "answer": "Selling Price/Marked Price"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "Probability range is?",
+    "options": [
+      "0 to 100",
+      "0 to 1",
+      "-1 to 1",
+      "1 to 10"
+    ],
+    "answer": "0 to 1"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "Perimeter of square?",
+    "options": [
+      "Side*Side",
+      "4*Side",
+      "2*Side",
+      "Side+Side"
+    ],
+    "answer": "4*Side"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "Distance formula?",
+    "options": [
+      "Speed/Time",
+      "Speed*Time",
+      "Speed+Time",
+      "Speed-Time"
+    ],
+    "answer": "Speed*Time"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "10% of 500 is?",
+    "options": [
+      "10",
+      "50",
+      "100",
+      "5"
+    ],
+    "answer": "50"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "Cube of 4 is?",
+    "options": [
+      "16",
+      "64",
+      "12",
+      "32"
+    ],
+    "answer": "64"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "12% of 500 is?",
+    "options": [
+      "50",
+      "60",
+      "70",
+      "12"
+    ],
+    "answer": "60"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "Square of 15 is?",
+    "options": [
+      "225",
+      "255",
+      "150",
+      "200"
+    ],
+    "answer": "225"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "LCM of 8 and 12 is?",
+    "options": [
+      "16",
+      "24",
+      "48",
+      "96"
+    ],
+    "answer": "24"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "Average formula is?",
+    "options": [
+      "Sum*Count",
+      "Sum/Count",
+      "Count/Sum",
+      "Sum+Count"
+    ],
+    "answer": "Sum/Count"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "Time = Distance / ?",
+    "options": [
+      "Work",
+      "Speed",
+      "Force",
+      "Time"
+    ],
+    "answer": "Speed"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "Ratio 5:10 simplifies to?",
+    "options": [
+      "1:5",
+      "1:2",
+      "2:1",
+      "5:1"
+    ],
+    "answer": "1:2"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "1/2 as percentage is?",
+    "options": [
+      "20%",
+      "50%",
+      "25%",
+      "100%"
+    ],
+    "answer": "50%"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "40% of 150 is?",
+    "options": [
+      "40",
+      "60",
+      "50",
+      "100"
+    ],
+    "answer": "60"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "Cube of 5 is?",
+    "options": [
+      "25",
+      "125",
+      "50",
+      "15"
+    ],
+    "answer": "125"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "If CP = SP then?",
+    "options": [
+      "Profit",
+      "Loss",
+      "No Profit No Loss",
+      "Discount"
+    ],
+    "answer": "No Profit No Loss"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "Next number: 2, 4, 8, 16, ?",
+    "options": [
+      "24",
+      "32",
+      "20",
+      "30"
+    ],
+    "answer": "32"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "Area of square is?",
+    "options": [
+      "Side*2",
+      "Side*Side",
+      "4*Side",
+      "Side+Side"
+    ],
+    "answer": "Side*Side"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "Half of 80 is?",
+    "options": [
+      "20",
+      "40",
+      "30",
+      "50"
+    ],
+    "answer": "40"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "Percentage means per?",
+    "options": [
+      "Ten",
+      "Hundred",
+      "Thousand",
+      "Million"
+    ],
+    "answer": "Hundred"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "HCF finds?",
+    "options": [
+      "Lowest Multiple",
+      "Greatest Divisor",
+      "Sum",
+      "Difference"
+    ],
+    "answer": "Greatest Divisor"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "Probability max value?",
+    "options": [
+      "100",
+      "1",
+      "10",
+      "Infinity"
+    ],
+    "answer": "1"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "15% of 300 is?",
+    "options": [
+      "30",
+      "45",
+      "15",
+      "60"
+    ],
+    "answer": "45"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "Square root of 169 is?",
+    "options": [
+      "14",
+      "13",
+      "12",
+      "16"
+    ],
+    "answer": "13"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "Ratio 4:6 simplifies to?",
+    "options": [
+      "4:3",
+      "2:3",
+      "3:2",
+      "1:2"
+    ],
+    "answer": "2:3"
+  },
+  {
+    "subject": "APTITUDE",
+    "topic": "APTITUDE",
+    "question": "If speed doubles, time taken?",
+    "options": [
+      "Doubles",
+      "Halves",
+      "Remains same",
+      "Triples"
+    ],
+    "answer": "Halves"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Noun means?",
+    "options": [
+      "Action",
+      "Name of person/place",
+      "Quality",
+      "Comparison"
+    ],
+    "answer": "Name of person/place"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Verb means?",
+    "options": [
+      "Name",
+      "Action/Doing word",
+      "Description",
+      "Location"
+    ],
+    "answer": "Action/Doing word"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Adjective describes?",
+    "options": [
+      "Verb",
+      "Noun",
+      "Conjunction",
+      "Preposition"
+    ],
+    "answer": "Noun"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Past tense of 'Go'?",
+    "options": [
+      "Goed",
+      "Gone",
+      "Went",
+      "Going"
+    ],
+    "answer": "Went"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Synonym of 'Fast'?",
+    "options": [
+      "Slow",
+      "Quick",
+      "Heavy",
+      "Late"
+    ],
+    "answer": "Quick"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Antonym of 'Big'?",
+    "options": [
+      "Large",
+      "Huge",
+      "Small",
+      "Tall"
+    ],
+    "answer": "Small"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "She ___ playing.",
+    "options": [
+      "are",
+      "is",
+      "am",
+      "were"
+    ],
+    "answer": "is"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Article before 'Apple'?",
+    "options": [
+      "A",
+      "The",
+      "An",
+      "None"
+    ],
+    "answer": "An"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Plural of 'Child'?",
+    "options": [
+      "Childs",
+      "Children",
+      "Childrens",
+      "Kid"
+    ],
+    "answer": "Children"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Opposite of 'Success'?",
+    "options": [
+      "Win",
+      "Defeat",
+      "Failure",
+      "Loss"
+    ],
+    "answer": "Failure"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "He ___ running.",
+    "options": [
+      "are",
+      "is",
+      "were",
+      "have"
+    ],
+    "answer": "is"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Adverb modifies?",
+    "options": [
+      "Noun",
+      "Pronoun",
+      "Verb",
+      "Conjunction"
+    ],
+    "answer": "Verb"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Synonym of 'Help'?",
+    "options": [
+      "Hinder",
+      "Assist",
+      "Stop",
+      "Ignore"
+    ],
+    "answer": "Assist"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Antonym of 'Accept'?",
+    "options": [
+      "Take",
+      "Receive",
+      "Reject",
+      "Keep"
+    ],
+    "answer": "Reject"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "They ___ gone.",
+    "options": [
+      "is",
+      "has",
+      "have",
+      "was"
+    ],
+    "answer": "have"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Comparative of 'Good'?",
+    "options": [
+      "Goodest",
+      "Better",
+      "Best",
+      "Bad"
+    ],
+    "answer": "Better"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Superlative of 'Tall'?",
+    "options": [
+      "Taller",
+      "Tallest",
+      "More Tall",
+      "Most Tall"
+    ],
+    "answer": "Tallest"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Fear of heights?",
+    "options": [
+      "Hydrophobia",
+      "Acrophobia",
+      "Claustrophobia",
+      "Xenophobia"
+    ],
+    "answer": "Acrophobia"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Biography means?",
+    "options": [
+      "Life story written by self",
+      "Life story written by another",
+      "Fiction",
+      "Poem"
+    ],
+    "answer": "Life story written by another"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Correct tense: I ___ finished.",
+    "options": [
+      "has",
+      "have",
+      "is",
+      "am"
+    ],
+    "answer": "have"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Synonym of 'Happy'?",
+    "options": [
+      "Sad",
+      "Joyful",
+      "Angry",
+      "Tired"
+    ],
+    "answer": "Joyful"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Antonym of 'Tall'?",
+    "options": [
+      "High",
+      "Small",
+      "Short",
+      "Big"
+    ],
+    "answer": "Short"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Verb expresses?",
+    "options": [
+      "Name",
+      "Action",
+      "Quality",
+      "Time"
+    ],
+    "answer": "Action"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Noun names?",
+    "options": [
+      "Action",
+      "Property",
+      "Person/Place/Thing",
+      "Time"
+    ],
+    "answer": "Person/Place/Thing"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Past of 'Eat'?",
+    "options": [
+      "Eaten",
+      "Ate",
+      "Eating",
+      "Eats"
+    ],
+    "answer": "Ate"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Plural of 'Man'?",
+    "options": [
+      "Mans",
+      "Men",
+      "Mens",
+      "Manes"
+    ],
+    "answer": "Men"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "She ___ writing.",
+    "options": [
+      "are",
+      "is",
+      "were",
+      "have"
+    ],
+    "answer": "is"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Article before 'Hour'?",
+    "options": [
+      "A",
+      "The",
+      "An",
+      "None"
+    ],
+    "answer": "An"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Opposite of 'Dark'?",
+    "options": [
+      "Black",
+      "Night",
+      "Light",
+      "Shadow"
+    ],
+    "answer": "Light"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Comparative of 'Small'?",
+    "options": [
+      "Smaller",
+      "Smallest",
+      "Tiny",
+      "Short"
+    ],
+    "answer": "Smaller"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Synonym of 'Quick'?",
+    "options": [
+      "Slow",
+      "Fast",
+      "Hard",
+      "Easy"
+    ],
+    "answer": "Fast"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Antonym of 'Rich'?",
+    "options": [
+      "Wealthy",
+      "Poor",
+      "Kind",
+      "Happy"
+    ],
+    "answer": "Poor"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Correct: They ___ playing.",
+    "options": [
+      "is",
+      "am",
+      "are",
+      "was"
+    ],
+    "answer": "are"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Past tense of 'See'?",
+    "options": [
+      "Seen",
+      "Saw",
+      "Seeing",
+      "Sees"
+    ],
+    "answer": "Saw"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "One-word for life story?",
+    "options": [
+      "Biology",
+      "Biography",
+      "History",
+      "Physics"
+    ],
+    "answer": "Biography"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Opposite of 'Early'?",
+    "options": [
+      "First",
+      "Late",
+      "Start",
+      "Morning"
+    ],
+    "answer": "Late"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Correct spelling?",
+    "options": [
+      "Knoledge",
+      "Knowledge",
+      "Nowledge",
+      "Knowlege"
+    ],
+    "answer": "Knowledge"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Synonym of 'Begin'?",
+    "options": [
+      "End",
+      "Start",
+      "Finish",
+      "Stop"
+    ],
+    "answer": "Start"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Synonym of 'Bright'?",
+    "options": [
+      "Dull",
+      "Intelligent",
+      "Dark",
+      "Sad"
+    ],
+    "answer": "Intelligent"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "Plural of 'Mouse'?",
+    "options": [
+      "Mouses",
+      "Mice",
+      "Rat",
+      "Mouse"
+    ],
+    "answer": "Mice"
+  },
+  {
+    "subject": "GRAMMAR",
+    "topic": "GRAMMAR",
+    "question": "She ___ reading.",
+    "options": [
+      "is",
+      "are",
+      "were",
+      "has"
+    ],
+    "answer": "is"
+  }
+]

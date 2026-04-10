@@ -1,3 +1,5 @@
+import { saveNotes } from './auth.js';
+
 // Pomodoro Timer Logic
 let pomodoroTimer;
 let timeLeft = 25 * 60;
@@ -155,6 +157,9 @@ export function initWellness() {
             });
             localStorage.setItem('selectra_notes_list', JSON.stringify(notesList));
             
+            // Sync to cloud
+            saveNotes(notesList);
+            
             notesArea.value = '';
             renderSavedNotes(savedContainer);
             
@@ -163,6 +168,20 @@ export function initWellness() {
             setTimeout(() => btnSaveNotes.innerText = originalText, 2000);
         });
     }
+
+    // Expose deleteNote to window but keep sync capability
+    window.deleteNote = async function(id) {
+        const saved = localStorage.getItem('selectra_notes_list');
+        if (!saved) return;
+        let notesList = JSON.parse(saved);
+        notesList = notesList.filter(n => n.id !== id);
+        localStorage.setItem('selectra_notes_list', JSON.stringify(notesList));
+        
+        // Sync to cloud
+        await saveNotes(notesList);
+        
+        renderSavedNotes(document.getElementById('saved-notes-container'));
+    };
 }
 
 function renderSavedNotes(container) {
@@ -187,14 +206,6 @@ function renderSavedNotes(container) {
     }).reverse().join('');
 }
 
-window.deleteNote = function(id) {
-    const saved = localStorage.getItem('selectra_notes_list');
-    if (!saved) return;
-    let notesList = JSON.parse(saved);
-    notesList = notesList.filter(n => n.id !== id);
-    localStorage.setItem('selectra_notes_list', JSON.stringify(notesList));
-    renderSavedNotes(document.getElementById('saved-notes-container'));
-}
 
 function updateDisplay(el) {
     const min = Math.floor(timeLeft / 60).toString().padStart(2, '0');

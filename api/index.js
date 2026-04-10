@@ -583,7 +583,7 @@ app.post('/api/auth/register', async (req, res) => {
         await user.save();
 
         const token = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: '7d' });
-        res.json({ success: true, token, user: { name: user.name, email: user.email, _id: user._id, progress: user.progress } });
+        res.json({ success: true, token, user: { name: user.name, email: user.email, _id: user._id, progress: user.progress, notes: user.notes } });
     } catch (err) {
         res.status(500).json({ success: false, message: 'Server error' });
     }
@@ -600,9 +600,34 @@ app.post('/api/auth/login', async (req, res) => {
         if (!isMatch) return res.status(400).json({ success: false, message: 'Invalid credentials' });
 
         const token = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: '7d' });
-        res.json({ success: true, token, user: { name: user.name, email: user.email, _id: user._id, progress: user.progress } });
+        res.json({ success: true, token, user: { name: user.name, email: user.email, _id: user._id, progress: user.progress, notes: user.notes } });
     } catch (err) {
         console.error("Login Error:", err);
+        res.status(500).json({ success: false, message: 'Server error: ' + err.message });
+    }
+});
+
+// Get User Notes
+app.get('/api/user/notes', authMiddleware, async (req, res) => {
+    try {
+        const user = await User.findById(req.user.id).select('notes');
+        res.json({ success: true, notes: user.notes });
+    } catch (err) {
+        console.error("Get Notes Error:", err);
+        res.status(500).json({ success: false, message: 'Server error: ' + err.message });
+    }
+});
+
+// Update User Notes
+app.put('/api/user/notes', authMiddleware, async (req, res) => {
+    try {
+        const { notes } = req.body;
+        const user = await User.findById(req.user.id);
+        if (notes !== undefined) user.notes = notes;
+        await user.save();
+        res.json({ success: true, notes: user.notes });
+    } catch (err) {
+        console.error("Update Notes Error:", err);
         res.status(500).json({ success: false, message: 'Server error: ' + err.message });
     }
 });

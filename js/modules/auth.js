@@ -1,6 +1,7 @@
 import CONFIG from '../config.js';
 const API_URL = `${CONFIG.API_URL}/api/auth`;
 const API_USER_URL = `${CONFIG.API_URL}/api/user/progress`;
+const API_NOTES_URL = `${CONFIG.API_URL}/api/user/notes`;
 
 export async function register(name, email, password) {
     const res = await fetch(`${API_URL}/register`, {
@@ -68,6 +69,9 @@ export async function ensureAuth() {
             user = data.user;
             localStorage.setItem('currentUser', JSON.stringify(user));
             initLocalProgress(user);
+            if (user.notes) {
+                localStorage.setItem('selectra_notes_list', JSON.stringify(user.notes));
+            }
         }
     } catch (e) {
         console.error("Failed to sync progress on load, using local cache.", e);
@@ -165,4 +169,36 @@ export function addInterviewResult(result) {
     progress.modulesCompleted++; 
 
     saveProgress(progress);
+}
+
+export async function saveNotes(notes) {
+    const token = localStorage.getItem('authToken');
+    if (!token) return;
+    try {
+        await fetch(API_NOTES_URL, {
+            method: 'PUT',
+            headers: { 
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify({ notes })
+        });
+    } catch (err) {
+        console.error("Notes cloud sync failed", err);
+    }
+}
+
+export async function fetchNotes() {
+    const token = localStorage.getItem('authToken');
+    if (!token) return [];
+    try {
+        const res = await fetch(API_NOTES_URL, {
+            headers: { 'Authorization': `Bearer ${token}` }
+        });
+        const data = await res.json();
+        return data.success ? data.notes : [];
+    } catch (err) {
+        console.error("Fetch notes failed", err);
+        return null;
+    }
 }
