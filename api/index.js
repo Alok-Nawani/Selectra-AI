@@ -25,7 +25,11 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // MongoDB Connection
-const MONGO_URI = process.env.MONGO_URI ? process.env.MONGO_URI.trim() : 'mongodb://127.0.0.1:27017/selectra';
+const MONGO_URI = (process.env.MONGO_URI || process.env.MONGO_URL || '').trim() || 'mongodb://127.0.0.1:27017/selectra';
+
+// Debug: Log all available ENV keys (not values) to see if there is a typo in the name
+console.log("Available Env Keys:", Object.keys(process.env).filter(k => k.includes('MONGO') || k.includes('DB') || k.includes('URI')));
+console.log("Current MONGO_URI start:", MONGO_URI.substring(0, 15));
 
 // Disable buffering so we get real errors immediately instead of timeouts
 mongoose.set('bufferCommands', false);
