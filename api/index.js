@@ -26,9 +26,20 @@ const PORT = process.env.PORT || 3000;
 
 // MongoDB Connection
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/selectra';
-mongoose.connect(MONGO_URI)
-    .then(() => console.log('MongoDB connected ->', MONGO_URI))
-    .catch(err => console.error('MongoDB connection error:', err));
+
+// Log status without leeking full credentials
+console.log("Attempting MongoDB connection. URI is " + (process.env.MONGO_URI ? "present (Starts with: " + MONGO_URI.substring(0, 15) + "...)" : "MISSING (Falling back to localhost)"));
+
+mongoose.connect(MONGO_URI, {
+    serverSelectionTimeoutMS: 5000, // Timeout after 5s instead of 10s for faster feedback
+})
+.then(() => console.log('✅ MongoDB connected.'))
+.catch(err => console.error('❌ MongoDB connection error:', err.message));
+
+// Handle connection events
+mongoose.connection.on('error', err => {
+    console.error('Mongoose connection error:', err);
+});
 
 const JWT_SECRET = process.env.JWT_SECRET || 'supersecretselectra2026';
 
