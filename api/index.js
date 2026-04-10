@@ -27,18 +27,36 @@ const PORT = process.env.PORT || 3000;
 // MongoDB Connection
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/selectra';
 
-// Log status without leeking full credentials
-console.log("Attempting MongoDB connection. URI is " + (process.env.MONGO_URI ? "present (Starts with: " + MONGO_URI.substring(0, 15) + "...)" : "MISSING (Falling back to localhost)"));
+let cachedConnection = null;
+async function connectToDatabase() {
+    if (cachedConnection && mongoose.connection.readyState === 1) return cachedConnection;
+    
+    console.log("Connecting to MongoDB...");
+    try {
+        cachedConnection = await mongoose.connect(MONGO_URI, {
+            serverSelectionTimeoutMS: 5000,
+            connectTimeoutMS: 10000,
+        });
+        console.log("✅ MongoDB Connected");
+        return cachedConnection;
+    } catch (err) {
+        console.error("❌ MongoDB Connection Error:", err.message);
+        throw err;
+    }
+}
 
-mongoose.connect(MONGO_URI, {
-    serverSelectionTimeoutMS: 5000, // Timeout after 5s instead of 10s for faster feedback
-})
-.then(() => console.log('✅ MongoDB connected.'))
-.catch(err => console.error('❌ MongoDB connection error:', err.message));
-
-// Handle connection events
-mongoose.connection.on('error', err => {
-    console.error('Mongoose connection error:', err);
+// Ensure DB is connected before handling any request
+app.use(async (req, res, next) => {
+    try {
+        await connectToDatabase();
+        next();
+    } catch (err) {
+        res.status(500).json({ 
+            success: false, 
+            message: "Database connection failed: " + err.message,
+            tip: "Check your MONGO_URI, Database User password, and Atlas IP Whitelist (0.0.0.0/0)"
+        });
+    }
 });
 
 const JWT_SECRET = process.env.JWT_SECRET || 'supersecretselectra2026';
