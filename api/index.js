@@ -103,13 +103,13 @@ function getGenAIClient() {
 
 // Helper: Robust AI Call with automatic key rotation and retries
 // Helper: Robust AI Call with automatic key rotation and model fallbacks
-async function callGemini(prompt, preferredModel = "gemini-2.5-flash") {
+async function callGemini(prompt, preferredModel = "gemini-1.5-flash") {
     const modelsToTry = [
         preferredModel,
         "gemini-1.5-flash",
-        "gemini-1.5-pro",
+        "gemini-2.0-flash-exp",
         "gemini-pro"
-    ];
+    ].filter(m => m !== "gemini-2.5-flash"); // Avoid the non-existent model name
 
     // Deduplicate
     const uniqueModels = [...new Set(modelsToTry)];
@@ -117,32 +117,86 @@ async function callGemini(prompt, preferredModel = "gemini-2.5-flash") {
     let lastError = null;
 
     for (const modelName of uniqueModels) {
-        try {
-            console.log(`Trying model: ${modelName}...`);
-            // Helper to get client (rotates keys if multiple exist)
-            const client = getGenAIClient();
-            const model = client.getGenerativeModel({ model: modelName });
+        // Try EVERY key for this model before moving to the next model
+        for (let i = 0; i < API_KEYS.length; i++) {
+            const key = API_KEYS[currentKeyIndex];
+            currentKeyIndex = (currentKeyIndex + 1) % API_KEYS.length;
 
-            const result = await model.generateContent(prompt);
-            const response = await result.response;
-            const text = response.text();
+            try {
+                console.log(`Trying model: ${modelName} with key index ${currentKeyIndex}...`);
+                const client = new GoogleGenerativeAI(key);
+                const model = client.getGenerativeModel({ model: modelName });
 
-            if (text) return text;
+                const result = await model.generateContent(prompt);
+                const response = await result.response;
+                const text = response.text();
 
-        } catch (error) {
-            console.error(`Model ${modelName} failed: ${error.message.split('\n')[0]}`);
-            lastError = error;
+                if (text) return text;
 
-            // If it's a safety block, maybe trying another model won't help, but worth a shot.
-            // If it's 429 (quota), another model might share the quota, but "flash" and "pro" might be separate.
+            } catch (error) {
+                console.error(`Attempt failed (Model: ${modelName}): ${error.message.split('\n')[0]}`);
+                lastError = error;
 
-            // Small delay to be polite to the API
-            await new Promise(r => setTimeout(r, 500));
+                // If it's a "model not found" error, don't try other keys for THIS model name
+                if (error.message.includes("404") || error.message.includes("not found")) break;
+                
+                // Otherwise (quota, invalid key), loop will try the next key
+                await new Promise(r => setTimeout(r, 200)); 
+            }
         }
     }
 
-    console.error("All models failed.");
+    console.error("All AI attempts (models and keys) failed.");
     throw lastError || new Error("All AI models failed.");
+}
+
+// Smart Fallback Analyzer for Interviews (Heuristic-based)
+function analyzeInterviewRuleBased(transcript, type, company) {
+    const wordCount = transcript.trim().split(/\s+/).length;
+    const sentenceCount = transcript.split(/[.!?]+/).filter(s => s.trim().length > 0).length;
+    
+    // Heuristic Score
+    let score = 45; 
+    if (wordCount > 50) score += 15;
+    if (wordCount > 150) score += 20;
+    if (sentenceCount > 4) score += 10;
+    
+    // Keyword analysis
+    const technicalKeywords = ["complexity", "time", "space", "array", "map", "logic", "algorithm", "design", "scale", "database", "api", "rest"];
+    const hrKeywords = ["team", "challenge", "learned", "growth", "conflict", "resolved", "example", "result", "leadership", "collaboration"];
+    
+    const targetKeywords = type === 'technical' ? technicalKeywords : hrKeywords;
+    const matched = targetKeywords.filter(k => transcript.toLowerCase().includes(k));
+    score += matched.length * 4;
+    
+    score = Math.min(100, score);
+    
+    let feedback = `**Overall Score: ${score}/100**\n\n`;
+    feedback += `**Smart Fallback Analysis (AI busy):**\n`;
+    feedback += `Your response was ${wordCount} words and ${sentenceCount} sentences long. `;
+    
+    if (wordCount < 40) {
+        feedback += `This is a bit brief for a ${type} role at ${company}. Try to add more concrete examples to support your points.\n\n`;
+    } else if (wordCount < 120) {
+        feedback += `Good progress! You covered a fair amount of detail, but could further enhance impact by using metrics or results.\n\n`;
+    } else {
+        feedback += `Great depth of explanation! You provided a very thorough and detailed response.\n\n`;
+    }
+    
+    feedback += `**Constructive Observations:**\n`;
+    if (matched.length > 0) {
+        feedback += `* Excellent use of professional terminology like: *${matched.slice(0, 5).join(', ')}*.\n`;
+    } else {
+        feedback += `* Practice incorporating more industry-standard ${type} keywords to improve your profile's relevance.\n`;
+    }
+    
+    if (type === 'hr') {
+        feedback += `* **Tip**: Use the STAR method (Situation, Task, Action, Result) to make behavioral answers more structured.\n`;
+    } else {
+        feedback += `* **Tip**: Always mention Time and Space complexity when discussing algorithms or system choices.\n`;
+    }
+    
+    return feedback;
 }
 
 // Basic Route
@@ -301,7 +355,7 @@ app.post('/api/analyze-resume', async (req, res) => {
         Return ONLY valid JSON. No markdown formatting.
         `;
 
-        const responseText = await callGemini(prompt, "gemini-2.5-flash");
+        const responseText = await callGemini(prompt, "gemini-1.5-flash");
 
         // Clean cleanup JSON if needed
         const jsonStr = responseText.replace(/```json/g, '').replace(/```/g, '').trim();
@@ -552,15 +606,19 @@ app.post('/api/generate-feedback', async (req, res) => {
         Analyze: ${transcript}
         Output format: Overall Score (0-100), Feedback summary, Question Analysis bullets.`;
 
-        const text = await callGemini(prompt);
+        const text = await callGemini(prompt, "gemini-1.5-flash");
         res.json({ success: true, feedback: text });
 
     } catch (error) {
-        console.error('Error generating feedback (All keys failed):', error.message);
-        // FALLBACK FEEDBACK
+        console.error('Error generating feedback (AI Failed):', error.message);
+        
+        // SMART FALLBACK
+        const { transcript, type, company } = req.body;
+        const fallbackFeedback = analyzeInterviewRuleBased(transcript, type, company);
+        
         res.json({
             success: true,
-            feedback: `**Overall Score: 85/100**\n\n**Feedback (Simulated):**\nThis is a generated feedback because all AI services are currently busy. You showed good confidence.\n\n**Question Analysis:**\n* Question 1: Good answer.`
+            feedback: fallbackFeedback
         });
     }
 });
