@@ -25,7 +25,10 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // MongoDB Connection
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/selectra';
+const MONGO_URI = process.env.MONGO_URI ? process.env.MONGO_URI.trim() : 'mongodb://127.0.0.1:27017/selectra';
+
+// Disable buffering so we get real errors immediately instead of timeouts
+mongoose.set('bufferCommands', false);
 
 let cachedConnection = null;
 async function connectToDatabase() {
@@ -36,6 +39,7 @@ async function connectToDatabase() {
         cachedConnection = await mongoose.connect(MONGO_URI, {
             serverSelectionTimeoutMS: 5000,
             connectTimeoutMS: 10000,
+            bufferCommands: false, // Double ensure no buffering
         });
         console.log("✅ MongoDB Connected");
         return cachedConnection;
