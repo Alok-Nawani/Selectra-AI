@@ -1,5 +1,6 @@
-const API_URL = 'http://localhost:5001/api/auth';
-const API_USER_URL = 'http://localhost:5001/api/user/progress';
+import CONFIG from '../config.js';
+const API_URL = `${CONFIG.API_URL}/api/auth`;
+const API_USER_URL = `${CONFIG.API_URL}/api/user/progress`;
 
 export async function register(name, email, password) {
     const res = await fetch(`${API_URL}/register`, {
@@ -129,7 +130,7 @@ export function saveProgress(newData) {
     localStorage.setItem(userKey, JSON.stringify(updated));
     
     const token = localStorage.getItem('authToken');
-    if (token && updated.courseProgress) {
+    if (token) {
         fetch(API_USER_URL, {
             method: 'PUT',
             headers: { 
@@ -137,9 +138,11 @@ export function saveProgress(newData) {
                 'Authorization': `Bearer ${token}`
             },
             body: JSON.stringify({
-                dsa: updated.courseProgress.dsa ? updated.courseProgress.dsa * 10 : 0,
-                dbms: updated.courseProgress.dbms ? updated.courseProgress.dbms * 10 : 0,
-                os: updated.courseProgress.os ? updated.courseProgress.os * 10 : 0
+                dsa: updated.courseProgress && updated.courseProgress.dsa ? updated.courseProgress.dsa * 10 : 0,
+                dbms: updated.courseProgress && updated.courseProgress.dbms ? updated.courseProgress.dbms * 10 : 0,
+                os: updated.courseProgress && updated.courseProgress.os ? updated.courseProgress.os * 10 : 0,
+                streak: updated.streak,
+                xp: updated.xp
             })
         }).catch(err => console.error("Cloud sync failed", err));
     }

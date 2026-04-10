@@ -1,4 +1,4 @@
-import { getCurrentUser } from './auth.js';
+import { getCurrentUser, getProgress, saveProgress } from './auth.js';
 
 let goals = [
     { id: 'dsa', text: 'Solve 2 DSA problems', completed: false },
@@ -49,14 +49,27 @@ function saveDailyGoals(currentGoals) {
 }
 
 function calculateStreak() {
-    const user = getCurrentUser();
-    let streak = user ? (user.streak || 1) : 1;
+    const progress = getProgress();
+    if (!progress) return;
+
+    let streak = progress.streak || 1;
     
     const currentGoals = getDailyGoals();
     const doneCount = currentGoals.filter(g => g.completed).length;
     const totalCount = currentGoals.length;
     const allDone = doneCount === totalCount;
-    if (allDone && totalCount > 0) streak++;
+
+    // Simple streak logic: if all done today, we ensure streak is at least what it was + potential increment
+    // Since this is called frequently, we need to be careful not to double-increment.
+    // Real streak logic usually checks 'lastActivity'.
+    
+    const today = new Date().toISOString().split('T')[0];
+    const lastActivity = progress.lastActivity ? progress.lastActivity.split('T')[0] : null;
+
+    if (allDone && totalCount > 0 && lastActivity !== today) {
+        streak++;
+        saveProgress({ streak: streak, lastActivity: new Date().toISOString() });
+    }
 
     const display = document.getElementById('streak-display');
     if (display) display.innerText = streak;

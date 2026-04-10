@@ -7,8 +7,14 @@ const { exec, execSync } = require('child_process');
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
-const tempExecDir = path.join(__dirname, 'temp_execution');
-if (!fs.existsSync(tempExecDir)) fs.mkdirSync(tempExecDir);
+const tempExecDir = process.env.VERCEL ? '/tmp/temp_execution' : path.join(__dirname, 'temp_execution');
+if (!fs.existsSync(tempExecDir)) {
+    try {
+        fs.mkdirSync(tempExecDir, { recursive: true });
+    } catch (e) {
+        console.warn("Failed to create tempExecDir, might be running in a restricted environment:", e.message);
+    }
+}
 const jwt = require('jsonwebtoken');
 require('dotenv').config({ path: path.join(__dirname, '.env') });
 require('dotenv').config(); // Also try root as fallback
@@ -576,12 +582,14 @@ app.get('/api/user/progress', authMiddleware, async (req, res) => {
 // Update User Progress
 app.put('/api/user/progress', authMiddleware, async (req, res) => {
     try {
-        const { dsa, dbms, os, completedTopics } = req.body;
+        const { dsa, dbms, os, completedTopics, streak, xp } = req.body;
         const user = await User.findById(req.user.id);
         
         if (dsa !== undefined) user.progress.dsa = dsa;
         if (dbms !== undefined) user.progress.dbms = dbms;
         if (os !== undefined) user.progress.os = os;
+        if (streak !== undefined) user.streak = streak;
+        if (xp !== undefined) user.xp = xp;
         
         if (completedTopics) {
             // Append only unique topics
