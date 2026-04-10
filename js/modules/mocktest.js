@@ -50,9 +50,17 @@ function startTest(num) {
     document.getElementById('mock-test-selector').classList.add('hidden');
     document.getElementById('mock-test-active').classList.remove('hidden');
 
-    // Pick random questions from the 500
+    // Pick random questions from the pool
     const shuffled = [...allQuestions].sort(() => 0.5 - Math.random());
-    currentTestQuestions = shuffled.slice(0, num).map(q => ({...q, user_answer: null}));
+    currentTestQuestions = shuffled.slice(0, num).map(q => {
+        // Create a deep copy and shuffle the options for this specific session
+        const opts = [...q.options].sort(() => 0.5 - Math.random());
+        return {
+            ...q,
+            options: opts,
+            user_answer: null
+        };
+    });
     
     currentIndex = 0;
     testScore = 0;
